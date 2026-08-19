@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Géolocalisation - TPM SA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#ffdbd1",
+                        "primary-fixed": "#e6deff",
+                        "on-primary-container": "#877db0",
+                        "background": "#faf8ff",
+                        "surface-container-high": "#e2e7ff",
+                        "primary": "#000000",
+                        "on-tertiary-container": "#818486",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#3b0900",
+                        "on-secondary-fixed-variant": "#862200",
+                        "outline": "#79757f",
+                        "on-surface": "#131b2e",
+                        "primary-fixed-dim": "#cabff7",
+                        "inverse-primary": "#cabff7",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary": "#b02f00",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#faf8ff",
+                        "tertiary-container": "#191c1e",
+                        "surface-container-highest": "#dae2fd",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary-fixed-variant": "#49406f",
+                        "inverse-surface": "#283044",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-variant": "#dae2fd",
+                        "primary-container": "#1d1441",
+                        "surface-bright": "#faf8ff",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c9c4cf",
+                        "surface-container": "#eaedff",
+                        "surface-dim": "#d2d9f4",
+                        "on-background": "#131b2e",
+                        "on-primary-fixed": "#1d1441",
+                        "tertiary-fixed": "#e0e3e5",
+                        "secondary-container": "#fd6537",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#5c1400",
+                        "on-surface-variant": "#48454e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#615888",
+                        // Custom Brand Colors based on strict directives
+                        "brand-primary": "#1C1340",
+                        "brand-accent": "#D84B1F",
+                        "brand-slate": "#0F172A",
+                        "brand-surface": "#F8FAFC",
+                        "brand-border": "#E2E8F0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "unit-4": "1rem",
+                        "unit-12": "3rem",
+                        "margin-mobile": "16px",
+                        "unit-1": "0.25rem",
+                        "unit-2": "0.5rem",
+                        "unit-6": "1.5rem",
+                        "gutter": "24px",
+                        "unit-8": "2rem",
+                        "base": "4px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "label-caps": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "technical-data": ["JetBrains Mono", "monospace"],
+                        "display-lg": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "technical-data": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-brand-surface text-brand-slate font-body-md antialiased min-h-screen">
+<!-- Hero Banner -->
+<section class="relative w-full min-h-[500px] flex items-center justify-center pt-24 pb-16 bg-brand-slate overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-brand-primary opacity-85 z-10 mix-blend-multiply"></div>
+<img alt="" class="w-full h-full object-cover" data-alt="A wide panoramic shot of a modern, large-scale industrial manufacturing plant interior. Heavy machinery and steel structures are visible under bright, industrial lighting. The atmosphere is professional, robust, and dependable, conveying scale and precision. High contrast, sharp focus, corporate heavy-industry aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM3rb2GrDGNcBr43CKOj3Z8vBxq-i8EVUfmBNhfs8JsuyaDrcwYoXdlfCJHpX6izZHWRTTKqNt8Nm4B_b5GCC2TlLnz4itzVRoD4OYxDB4gv_cT7EEh3BncV3qELOPUUkQTyElg-gCCVIq12hx9Wdr0fj-S_wg_97NkfofUTEfqGy6wNdxCBlxm4j-x4w_zkzxPYMEWjneqprmFof8lsxa6d8NzCtNAAHsoFbUu0iTEASr0yc2gI45"/>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<div class="max-w-4xl">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-unit-6">CONTACT &amp; GÉOLOCALISATION DE L'USINE TPM SA</h1>
+<p class="font-body-lg text-body-lg text-surface-container-high mb-unit-8 max-w-2xl">
+                    Demandes de devis sur mesure, suivi de production et enlèvement de commandes. Nos équipes industrielles sont à votre disposition.
+                </p>
+<div class="flex flex-wrap gap-unit-4">
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/20 rounded px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-accent">schedule</span>
+<div>
+<p class="font-label-caps text-label-caps text-surface-container-high">USINE BEKOKO</p>
+<p class="font-body-sm text-body-sm text-on-primary font-medium">Lun-Ven: 07h30 - 16h30</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/20 rounded px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-accent">store</span>
+<div>
+<p class="font-label-caps text-label-caps text-surface-container-high">COMPTOIR PK12</p>
+<p class="font-body-sm text-body-sm text-on-primary font-medium">Lun-Sam: 08h00 - 17h00</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/20 rounded px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-[#25D366]">chat</span>
+<div>
+<p class="font-label-caps text-label-caps text-surface-container-high">ASSISTANCE WHATSAPP</p>
+<p class="font-body-sm text-body-sm text-on-primary font-medium">Réponse Rapide</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Contact Grid -->
+<section class="py-unit-12 max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit-6">
+<!-- Card 1: Commercial -->
+<div class="bg-surface-container-lowest border border-brand-border rounded-lg overflow-hidden group hover:border-brand-primary hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A brightly lit, modern industrial sales desk setting. Professionals in business attire reviewing technical blueprints and discussing quotes. Clean, white and light blue color palette, emphasizing B2B professional trust and precision in a corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATq2hhKuWueHuHj81KDFgv0UEWb7EGQNwoSrDzYsF3wJMFR3KlIcw498Jof-kL6xiMfixw9JyGwIotec6o9OOc9jM63EtyQ_ePS5fvhXEm6qcfpDbz-O6VxPiWgue-3CL4svZgidyWADRQzOLKsVV0GivsA8kmPdZskTNFtlsL78OuMEV8-D_oLqNxnn9ST4DSv3fvMFXvIfpRuDOnD8w0SkP2tsCNuqgGPBc_EoFzgTSBD03gpBQx"/>
+<div class="absolute top-4 right-4 bg-brand-surface text-brand-primary px-3 py-1 rounded font-label-caps text-label-caps border border-brand-border shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#22c55e]"></span> Réponse sous 2h
+                    </div>
+</div>
+<div class="p-unit-6 border-t border-brand-border">
+<h3 class="font-headline-md text-headline-md text-brand-primary mb-4">Commercial &amp; Devis</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-slate text-opacity-70">call</span>
+<span class="font-body-sm text-body-sm text-brand-slate">+237 6XX XX XX XX</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#25D366]">forum</span>
+<span class="font-body-sm text-body-sm text-brand-slate">WhatsApp Business</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-slate text-opacity-70">mail</span>
+<span class="font-body-sm text-body-sm text-brand-slate">commercial@tpm-sa.com</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Bureau d'Études -->
+<div class="bg-surface-container-lowest border border-brand-border rounded-lg overflow-hidden group hover:border-brand-primary hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of structural engineers working on CAD designs and technical drawings in a bright, well-lit office. Hard hats and blueprints on the table. The mood is analytical, authoritative, and focused on technical clarity. White and steel grey tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSpWznQ5TQOfSU7bFInPpNd6J0NO8h9BQ__pNE0bIkUmmnPEQIbhwQ7YEg8iGjmSmv3KjI4pbEWEWPUp2aa9go-ZFVPTrjRyKiTCdIoLZN6xs1vr2NB2fQfEk7ATvtYB9hWHgP380TB7Spcfa3360faIVR5nDNmBXLVfBY-LqMGBVTedY27Wl86pe_oCEYHkjDK1mi8p1u0PvD7dQrEKjbz7AWWPXz3vrCMnafuP_YEiXq7bNv8105"/>
+<div class="absolute top-4 right-4 bg-brand-surface text-brand-primary px-3 py-1 rounded font-label-caps text-label-caps border border-brand-border shadow-sm">
+                        Étude technique gratuite
+                    </div>
+</div>
+<div class="p-unit-6 border-t border-brand-border">
+<h3 class="font-headline-md text-headline-md text-brand-primary mb-4">Bureau d'Études</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-slate text-opacity-70">call</span>
+<span class="font-body-sm text-body-sm text-brand-slate">+237 6XX XX XX XX</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-slate text-opacity-70">mail</span>
+<span class="font-body-sm text-body-sm text-brand-slate">etudes@tpm-sa.com</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Logistique -->
+<div class="bg-surface-container-lowest border border-brand-border rounded-lg overflow-hidden group hover:border-brand-primary hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavy transport trucks at loading docks of a large industrial facility. Forklifts moving steel pallets. High contrast lighting highlighting the robust infrastructure and active logistics operations. Dark navy and concrete grey tones dominate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa2uAyq9AK-_UtmcATBq1fXhCM6lovRb4ktXDPuobczrJEGOxyZLhG-I4td3dY07qst1XrTuQDoERy25LkKm9l-J7uQUa5iELjIXjgDuBAhwYtNhr_setYrrSYEzgzcOfeDNkJ5tsJ7V4edcHAAh_DwvLdYEtkM_jMSxPoTuXHvYNoFJK9WdZeTB3jX87NiBw-LgxAYxsz7jzjZ3oUPKeBUlwPV4PX52ovdgumnpDbh5d89CuWNGCV"/>
+<div class="absolute top-4 right-4 bg-brand-surface text-brand-primary px-3 py-1 rounded font-label-caps text-label-caps border border-brand-border shadow-sm">
+                        Enlèvement Usine Bekoko
+                    </div>
+</div>
+<div class="p-unit-6 border-t border-brand-border">
+<h3 class="font-headline-md text-headline-md text-brand-primary mb-4">Logistique &amp; Enlèvement</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-slate text-opacity-70">call</span>
+<span class="font-body-sm text-body-sm text-brand-slate">+237 6XX XX XX XX</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-slate text-opacity-70">mail</span>
+<span class="font-body-sm text-body-sm text-brand-slate">logistique@tpm-sa.com</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-unit-12 max-w-container-max mx-auto px-margin-mobile md:px-gutter border-t border-brand-border">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-unit-8">
+<!-- Map Module -->
+<div class="h-[400px] lg:h-full min-h-[400px] bg-surface-container-lowest border border-brand-border rounded-lg overflow-hidden relative">
+<!-- Using a placeholder image for map as instructed, since we can't embed real interactive maps easily without external scripts -->
+<img alt="Map Location" class="w-full h-full object-cover opacity-80" data-alt="A clean, high-contrast digital map interface showing an industrial zone, highlighting major transport routes and factory locations. Minimalist UI style, light mode colors with sharp blue and grey route lines." data-location="Bekoko" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiqFLfsjfIsZOZhaicvSTCfl8tKuhpd3nhWDo6ObdepA0YD0n_leo2IT_0hYXCzbPocp1yWAQ8kcihA0kpIwvtN9kKUC4N8Oy05KGGyGUen7Dyc9FO0tguayvGVDSn6OtdpxRcfoXQYdKCzq6RLukULY-4FpGLja3MG2ThjiH0dxuLGVkoqrNdnD7GgUz4f_qjH1j0Gwm5gMo33wjIAehud8Fw-tnMX5Gz3qHC8ACMaVchmrHIg8h"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest p-4 rounded shadow-md border border-brand-border">
+<h4 class="font-headline-md text-headline-md text-brand-primary mb-1">Zone Industrielle Bekoko</h4>
+<p class="font-body-sm text-body-sm text-brand-slate">Site de Production Principal</p>
+</div>
+</div>
+<!-- Site Details -->
+<div class="space-y-unit-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-brand-primary mb-4">Sites &amp; Accès</h2>
+<p class="font-body-md text-body-md text-brand-slate">
+                        Nos installations sont conçues pour accueillir des véhicules de grand gabarit afin de faciliter vos approvisionnements en matériaux de construction et structures métalliques.
+                    </p>
+</div>
+<div class="bg-surface-container-lowest border border-brand-border rounded-lg p-unit-6">
+<div class="flex items-start gap-4 mb-4">
+<span class="material-symbols-outlined text-brand-accent text-3xl mt-1">factory</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-brand-primary">Usine Principale - Bekoko</h3>
+<p class="font-body-sm text-body-sm text-brand-slate mt-1">Zone Industrielle de Bekoko, Douala, Cameroun</p>
+</div>
+</div>
+<ul class="space-y-2 ml-12 font-technical-data text-technical-data text-brand-slate">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-slate rounded-full"></span> Accès camions &gt; 12m: Oui</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-slate rounded-full"></span> Pont bascule: Disponible</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-slate rounded-full"></span> Horaires de charge: 08h00 - 16h00</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest border border-brand-border rounded-lg p-unit-6">
+<div class="flex items-start gap-4 mb-4">
+<span class="material-symbols-outlined text-brand-primary text-3xl mt-1">storefront</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-brand-primary">Comptoir Commercial - PK12</h3>
+<p class="font-body-sm text-body-sm text-brand-slate mt-1">Axe Lourd Douala-Yaoundé, PK12</p>
+</div>
+</div>
+<ul class="space-y-2 ml-12 font-technical-data text-technical-data text-brand-slate">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-slate rounded-full"></span> Vente au détail: Oui</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-slate rounded-full"></span> Enlèvement véhicules légers: Oui</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-unit-12 bg-surface-container-low border-t border-brand-border">
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-unit-8">
+<h2 class="font-headline-lg text-headline-lg text-brand-primary mb-2">Envoyer une Demande</h2>
+<p class="font-body-md text-body-md text-brand-slate">Remplissez le formulaire ci-dessous pour une prise en charge rapide par nos équipes techniques ou commerciales.</p>
+</div>
+<form class="bg-surface-container-lowest border border-brand-border rounded-lg p-unit-8 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-4 mb-unit-4">
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">Nom / Raison Sociale *</label>
+<input class="w-full bg-surface-container-lowest border border-brand-border rounded focus:border-brand-accent focus:ring-0 font-body-md text-brand-slate h-10 px-3 transition-colors" required="" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">NIU (Numéro d'Identifiant Unique)</label>
+<input class="w-full bg-surface-container-lowest border border-brand-border rounded focus:border-brand-accent focus:ring-0 font-body-md text-brand-slate h-10 px-3 transition-colors" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-4 mb-unit-4">
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">Email Professionnel *</label>
+<input class="w-full bg-surface-container-lowest border border-brand-border rounded focus:border-brand-accent focus:ring-0 font-body-md text-brand-slate h-10 px-3 transition-colors" required="" type="email"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">Numéro WhatsApp</label>
+<input class="w-full bg-surface-container-lowest border border-brand-border rounded focus:border-brand-accent focus:ring-0 font-body-md text-brand-slate h-10 px-3 transition-colors" type="tel"/>
+</div>
+</div>
+<div class="mb-unit-4">
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">Service Concerné *</label>
+<select class="w-full bg-surface-container-lowest border border-brand-border rounded focus:border-brand-accent focus:ring-0 font-body-md text-brand-slate h-10 px-3 transition-colors" required="">
+<option value="">Sélectionnez un service...</option>
+<option value="devis">Demande de Devis (Tôles, Fers, Ciment)</option>
+<option value="etudes">Bureau d'Études (Structures Métalliques)</option>
+<option value="logistique">Logistique &amp; Enlèvement</option>
+<option value="autre">Autre demande</option>
+</select>
+</div>
+<div class="mb-unit-4">
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">Message / Détails de la demande *</label>
+<textarea class="w-full bg-surface-container-lowest border border-brand-border rounded focus:border-brand-accent focus:ring-0 font-body-md text-brand-slate p-3 transition-colors" required="" rows="4"></textarea>
+</div>
+<div class="mb-unit-6">
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1">Pièces Jointes (PDF, DWG, Images)</label>
+<div class="border-2 border-dashed border-brand-border rounded p-4 text-center hover:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-brand-slate text-opacity-50 group-hover:text-brand-primary mb-2">upload_file</span>
+<p class="font-body-sm text-body-sm text-brand-slate">Cliquez ou glissez vos fichiers ici (Max 10MB)</p>
+<input accept=".pdf,.dwg,.jpg,.png" class="hidden" multiple="" type="file"/>
+</div>
+</div>
+<button class="w-full bg-brand-accent text-on-primary font-label-caps text-label-caps rounded py-3 hover:bg-opacity-90 transition-opacity flex justify-center items-center gap-2" type="submit">
+                    ENVOYER MON MESSAGE À L'USINE
+                    <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Bottom Action Banner -->
+<section class="bg-brand-primary py-unit-8">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row items-center justify-between gap-unit-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary">Besoin d'une réponse immédiate?</h2>
+<p class="font-body-md text-body-md text-surface-container-high mt-2">Nos conseillers techniques sont disponibles sur WhatsApp pour une assistance directe.</p>
+</div>
+<a class="bg-[#25D366] text-on-primary font-label-caps text-label-caps px-6 py-3 rounded flex items-center gap-2 hover:bg-opacity-90 transition-opacity whitespace-nowrap" href="#">
+<span class="material-symbols-outlined">chat</span>
+                CONTACTER SUR WHATSAPP
+            </a>
+</div>
+</section>
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TPM SA - Catalogue Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#79757f",
+                        "on-secondary-fixed": "#3b0900",
+                        "surface-tint": "#615888",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#cabff7",
+                        "on-background": "#131b2e",
+                        "outline-variant": "#c9c4cf",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf8ff",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "surface-container-highest": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#cabff7",
+                        "on-primary-container": "#877db0",
+                        "secondary": "#b02f00",
+                        "primary-container": "#1d1441",
+                        "on-primary-fixed": "#1d1441",
+                        "surface-container-low": "#f2f3ff",
+                        "surface": "#faf8ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-container": "#eaedff",
+                        "on-surface": "#131b2e",
+                        "on-secondary-fixed-variant": "#862200",
+                        "surface-dim": "#d2d9f4",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary-container": "#fd6537",
+                        "primary-fixed": "#e6deff",
+                        "inverse-surface": "#283044",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-primary-fixed-variant": "#49406f",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#48454e",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-variant": "#dae2fd",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#5c1400",
+                        "tertiary-container": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "on-tertiary-container": "#818486",
+                        "secondary-fixed": "#ffdbd1",
+                        
+                        "tpm-navy": "#1C1340",
+                        "tpm-terracotta": "#D84B1F",
+                        "tpm-surface": "#F8FAFC",
+                        "tpm-slate": "#0F172A",
+                        "tpm-border": "#E2E8F0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "base": "4px",
+                        "unit-12": "3rem",
+                        "unit-8": "2rem",
+                        "unit-4": "1rem",
+                        "unit-2": "0.5rem",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "unit-6": "1.5rem",
+                        "unit-1": "0.25rem"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Inter", "sans-serif"],
+                        "technical-data": ["JetBrains Mono", "monospace"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "technical-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest font-body-md text-on-surface antialiased">
+<!-- HERO BANNER -->
+<section class="relative bg-tpm-slate overflow-hidden py-unit-12 lg:py-24">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide shot of a massive, modern industrial warehouse filled with neatly stacked, gleaming corrugated metal roofing sheets (Tôles BAC). The setting is a large-scale logistics center in Douala, illuminated by bright, cool-toned high-bay LED lights. The aesthetic is highly organized, professional, and robust, emphasizing the scale of industrial manufacturing. The mood is authoritative and dependable, utilizing a corporate light-mode visual style with deep navy structural accents and terracotta highlights on machinery." src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+<div class="absolute inset-0 bg-tpm-navy/80 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col items-center text-center">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-unit-4 max-w-4xl">
+                CATALOGUE OFFICIEL TPM SA.
+            </h1>
+<p class="font-body-lg text-body-lg text-surface-container-high mb-unit-8 max-w-3xl">
+                Consultez l'ensemble de nos références disponibles en stock et sur commande à l'Usine (Douala PK12 / Bekoko).
+            </p>
+<!-- Search Card -->
+<div class="w-full max-w-3xl bg-surface-container-lowest p-unit-6 rounded border border-tpm-border shadow-lg">
+<form class="flex flex-col md:flex-row gap-unit-4">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-unit-4 top-1/2 transform -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-tpm-border rounded text-on-surface focus:outline-none focus:border-tpm-terracotta focus:ring-1 focus:ring-tpm-terracotta font-body-sm text-body-sm transition-colors" placeholder="Rechercher un article (ex: Tôle BAC, Faîtière, Fixation 6x80...)" type="text"/>
+</div>
+<button class="bg-tpm-terracotta text-on-primary px-8 py-3 rounded font-bold font-body-md hover:bg-opacity-90 transition-opacity whitespace-nowrap" type="button">
+                        Rechercher
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- 6 CATEGORIES GRID -->
+<section class="bg-tpm-surface py-unit-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="mb-unit-8 border-b border-tpm-border pb-unit-4">
+<h2 class="font-headline-lg text-headline-lg text-tpm-navy">Familles de Produits</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-unit-6">
+<!-- CAT 1: Tôles & Couvertures -->
+<div class="group bg-surface-container-lowest border border-tpm-border rounded overflow-hidden hover:border-tpm-navy hover:shadow-md transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of stacked, brand new galvanized corrugated steel roofing sheets in an industrial setting. Sharp focus on the precise ridges and metallic texture, bathed in cool, bright industrial lighting. Corporate heavy-industry aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+</div>
+<div class="p-unit-6 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-tpm-navy mb-unit-2">Tôles &amp; Couvertures</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-6 flex-grow">
+                            Tôles BAC (Alu &amp; Prélaquées), Tôles Ondulées, Tôles Plastiques Translucides (Blanc, Bleu, Jaune, Vert, Rouge), Tôles Planes.
+                        </p>
+<button class="w-full bg-tpm-navy text-on-primary py-2 px-4 rounded font-body-sm text-body-sm font-semibold hover:bg-opacity-90 transition-opacity">
+                            Voir les tôles
+                        </button>
+</div>
+</div>
+<!-- CAT 2: Accessoires de Toiture -->
+<div class="group bg-surface-container-lowest border border-tpm-border rounded overflow-hidden hover:border-tpm-navy hover:shadow-md transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detailed view of precisely folded metal ridge caps and industrial gutters arranged symmetrically on a warehouse rack. The lighting highlights the sharp edges and metallic sheen. Professional B2B catalog style, strong contrast, structural composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbmc5juoAyLjGSk9fbCwmRoacxGNepGSCL8aecRm87H6-QS7kjghnjtEESbTLmaE7_1WW336mw8154KuGnksdDNDdniermcbSr1NgZxk0C_PsK7R4nTzw_cWcaS-BTfZyg5cuWU1ybOPOYDCiFgoKaP4FgB0NoIg6yebPxjbJUEfs_xoDxDZXkgeftUNZYvNUtX7uMay9aKOxmVlUHlB3G-iY2JTHCpCDbnd3OcFV7JrobZdOhNAE6"/>
+</div>
+<div class="p-unit-6 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-tpm-navy mb-unit-2">Accessoires de Toiture &amp; Pliage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-6 flex-grow">
+                            Faîtières, Rives, Gouttières, Angles, Noues, Solins, Tendeurs.
+                        </p>
+<button class="w-full bg-tpm-navy text-on-primary py-2 px-4 rounded font-body-sm text-body-sm font-semibold hover:bg-opacity-90 transition-opacity">
+                            Voir les accessoires
+                        </button>
+</div>
+</div>
+<!-- CAT 3: Fixations -->
+<div class="group bg-surface-container-lowest border border-tpm-border rounded overflow-hidden hover:border-tpm-navy hover:shadow-md transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro photography of heavy-duty industrial bolts, screws, and twisted nails spilling out of a sturdy container. Shallow depth of field focusing on the robust threading. Industrial grit meets corporate clarity. Cool lighting with subtle warm highlights." src="https://lh3.googleusercontent.com/aida/AP1WRLvxA3bmlnpCj9hAdrZXF0GhQ6QFmKJCyfoxOpoLGmMi75iZOIfoCsx-ZLfwEm5_FNmLmbNNR5CkkfNZTtQo-sFwxuzqcHaBeN1az04AekOq7BQev2SRE5024i0-Qdmh6sk83Y7T7SIjb0wkTFAha2OYlqmdnKXAag04Gr6eYgm0o9WfJxMlT_bgOzq_b-FCQP0HKK7ABB6Vik8L-Y4TOsCxS8MhKk95DdA4WNx-2aSev29VRbACSNGBq4o"/>
+</div>
+<div class="p-unit-6 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-tpm-navy mb-unit-2">Fixations, Pointes &amp; Étanchéité</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-6 flex-grow">
+                            Fixations 6x60/6x80, Joints Bitumés, Pointes Torsadées, Tirefonds, Vis, Cavaliers.
+                        </p>
+<button class="w-full bg-tpm-navy text-on-primary py-2 px-4 rounded font-body-sm text-body-sm font-semibold hover:bg-opacity-90 transition-opacity">
+                            Voir les fixations
+                        </button>
+</div>
+</div>
+<!-- CAT 4: Emballages -->
+<div class="group bg-surface-container-lowest border border-tpm-border rounded overflow-hidden hover:border-tpm-navy hover:shadow-md transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-angle shot of large rolls of industrial packaging films and neatly stacked woven PP sacks in a modern warehouse. Bright, even illumination emphasizing the scale and organization of the inventory. Clean, professional logistics aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLsCzsghKOJLGW-wbOZJXQnnTjaE968pC6_BzEh1JjF6kXLe5rDBWy2Z5g9RyH2udHTM2YoCm1zi8wy3_ujgqkAf3RHDcAiO9VEDLlk4AGK7tW8Jq7TAeemA3pymz8SuhPEWY6qAheE-9vcdVog7LGg0Uia6fE54GXvHl4j8vyPBlRVot1BcvOAdd2dPmfnhsbMASA8E0_qni1VHowfZBvDLhyPPfgQC31f1J_UUvuml8ICmlORLpyy1ZdM"/>
+</div>
+<div class="p-unit-6 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-tpm-navy mb-unit-2">Emballages, Plastique &amp; Fils</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-6 flex-grow">
+                            Sacs PP 50kg/100kg, Éponges Métalliques, Fils Ronds 020, Gaines 11mm.
+                        </p>
+<button class="w-full bg-tpm-navy text-on-primary py-2 px-4 rounded font-body-sm text-body-sm font-semibold hover:bg-opacity-90 transition-opacity">
+                            Voir les emballages
+                        </button>
+</div>
+</div>
+<!-- CAT 5: Carreaux -->
+<div class="group bg-surface-container-lowest border border-tpm-border rounded overflow-hidden hover:border-tpm-navy hover:shadow-md transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A meticulously arranged display of premium ceramic and porcelain floor tiles in a large showroom. Variations in texture and color are visible under bright, neutral spotlights. Architectural, clean lines, professional B2B presentation style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABU-JseN4JqOXO62tUgBIliv1FhvK5WcG841k1rHEXZZObHjUnpQ2fsEyt_4G8gxT6d7GXakgVSFW3wbWUdykXz2GN6e11VcdCb5mtsHm2kLwTT177elXwazhrvyFAL_lmt1CfXoKRh4n9JhJ3sLm6ToZxVf1sGikUMGGsKGBt3thyUGDAezZPXKJzINVe4ISL5PleM3S1IlMwevQmxCbvcQqcuOivxAqo5BcKMK2cqlsJnms8Zl3K"/>
+</div>
+<div class="p-unit-6 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-tpm-navy mb-unit-2">Carreaux &amp; Revêtements</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-6 flex-grow">
+                            Carreaux 10x10 au 60x120 (Monocutura, Realto, Verony).
+                        </p>
+<button class="w-full bg-tpm-navy text-on-primary py-2 px-4 rounded font-body-sm text-body-sm font-semibold hover:bg-opacity-90 transition-opacity">
+                            Voir les carreaux
+                        </button>
+</div>
+</div>
+<!-- CAT 6: Quincaillerie -->
+<div class="group bg-surface-container-lowest border border-tpm-border rounded overflow-hidden hover:border-tpm-navy hover:shadow-md transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A robust industrial hardware section featuring heavy-duty wheelbarrows, specialized tools, and electrical components neatly organized on sturdy metal shelving. Well-lit, highly ordered, emphasizing reliability and comprehensive inventory for construction needs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDdSeuhW5H2Z6BaldeSkTjcr1fT13laPF1RpeFaT8rZgsGPBoCQiD28FvcDbJ1cfS__ekjXEZqla4q9DsDcyu4Jelhtd7rW2bQtt9vWjqUN0hzGNEVa219dL8j6DsO8_ewIZuAh1o1utMiU3tCR0uz8V-PfHxRc00R7EJlmaOqv1EkIsuq-F1Tg6-5tScgznMAwSf7jNc-Gd_Y1BzQr_a33gtVpA823NVu0gQDTwEptTGxcfhBuPiF"/>
+</div>
+<div class="p-unit-6 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-tpm-navy mb-unit-2">Quincaillerie, Outillage &amp; Bâtiment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-6 flex-grow">
+                            Outillage, Électricité, Sanitaire (Lorenzetti), Serrures Vachette.
+                        </p>
+<button class="w-full bg-tpm-navy text-on-primary py-2 px-4 rounded font-body-sm text-body-sm font-semibold hover:bg-opacity-90 transition-opacity">
+                            Voir la quincaillerie
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRO-FORMA B2B BANNER -->
+<section class="bg-tpm-navy py-unit-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col lg:flex-row items-center justify-between gap-unit-8">
+<div class="flex-1 text-center lg:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-unit-2">
+                    Vous avez une liste ou une commande spécifique B2B?
+                </h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest max-w-2xl">
+                    Transmettez directement votre référence d'article ou bordereau pour recevoir votre Pro-Forma officielle.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-unit-4 w-full lg:w-auto">
+<button class="bg-tpm-terracotta text-on-primary px-6 py-4 rounded font-bold font-body-md hover:bg-opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">request_quote</span>
+                    Demander une Pro-Forma
+                </button>
+<button class="bg-[#25D366] text-on-primary px-6 py-4 rounded font-bold font-body-md hover:bg-opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+                    Contact Commercial WhatsApp
+                </button>
+</div>
+</div>
+</section>
+</body></html>

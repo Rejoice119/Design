@@ -1,0 +1,514 @@
+<!-- BEGIN: TPM SA Body Architecture --><!-- Note: Included Inter font and Tailwind CSS via CDN as requested in instructions. 
+     Header and Footer are omitted as per prompt. --><!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TPM SA (Groupe CAC) - Puissance Industrielle</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            tpm: {
+              navy: '#1C1340',
+              orange: '#D84B1F',
+              slate: '#0F172A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles -->
+<style data-purpose="base-styles">
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<style data-purpose="glassmorphism">
+    .glass-card {
+      background: rgba(28, 19, 64, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+<!-- ========================================== -->
+<!-- PART 1: HERO & METRICS                     -->
+<!-- ========================================== -->
+<!-- BEGIN: Hero Section -->
+<section class="relative bg-tpm-slate min-h-[90vh] flex items-center overflow-hidden" data-purpose="hero-section">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic factory laser cutting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvcuEO2CrIdsmtypBV7F5nJhbQD3LsGEMH1vhQtG0kWcdEBbmtLm_uyvnI19d0-DUFlKwAn_K5ZDI0kIYxgrH7hYz5zfTzCBnRM_0amvqYlBOFk_PCHdilq7ebjragY0R-MHAE4IgZbnyX5B5PPcyblPTyRs4dEAp_sR9LRyrdVTahjLxFffa52nXHnB1bXnxgY62FWJbLLXAMx6EWAxB5dvkYdIiQlEYcoF9nb13nOWQUNyEmiJ7h-Ug"/>
+<div class="absolute inset-0 bg-tpm-navy/80 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-tpm-slate/50"></div> <!-- Additional darkening for text readability -->
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+<!-- Left Content -->
+<div class="space-y-8" data-purpose="hero-content">
+<!-- Badge -->
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-tpm-orange/10 border border-tpm-orange/30 text-tpm-orange font-semibold text-sm tracking-wide uppercase">
+            ★ Groupe CAC depuis 1976
+          </div>
+<!-- Headlines -->
+<div class="space-y-4">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight uppercase tracking-tight">
+              La Puissance Industrielle <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Au Service de vos Chantiers</span>
+</h1>
+<p class="text-lg md:text-xl text-gray-300 max-w-2xl font-medium leading-relaxed">
+              Leader camerounais dans le profilage d'acier, la fabrication de fixations industrielles et le zingage unique en Afrique Centrale.
+            </p>
+</div>
+<!-- Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex justify-center items-center px-8 py-4 bg-tpm-orange hover:bg-orange-700 text-white font-bold rounded-lg transition duration-300 shadow-lg shadow-tpm-orange/30" href="#catalogue">
+              VOIR LE CATALOGUE
+            </a>
+<a class="inline-flex justify-center items-center px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-tpm-navy font-bold rounded-lg transition duration-300" href="#usine">
+              VISITER L'USINE
+            </a>
+</div>
+<!-- Glassmorphism Form -->
+<div class="mt-12 glass-card rounded-2xl p-6 md:p-8 max-w-lg shadow-2xl" data-purpose="proforma-form">
+<h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+<span class="w-2 h-6 bg-tpm-orange rounded-sm inline-block"></span>
+              Demande de Pro-Forma Flash B2B
+            </h3>
+<form action="#" class="space-y-5" method="POST">
+<div>
+<label class="sr-only" for="raison_sociale">Raison Sociale</label>
+<input class="block w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-tpm-orange focus:border-transparent transition" id="raison_sociale" name="raison_sociale" placeholder="Raison Sociale (Entreprise)" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="whatsapp">Numéro WhatsApp</label>
+<input class="block w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-tpm-orange focus:border-transparent transition" id="whatsapp" name="whatsapp" placeholder="Numéro WhatsApp" type="tel"/>
+</div>
+<div>
+<label class="sr-only" for="category">Catégorie de Produits</label>
+<select class="block w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-tpm-orange focus:border-transparent transition [&amp;&gt;option]:text-tpm-navy" id="category" name="category">
+<option class="text-gray-400" disabled="" selected="" value="">Sélectionnez une catégorie...</option>
+<option value="toles">Tôles &amp; Couvertures</option>
+<option value="fixations">Fixations Industrielles</option>
+<option value="zingage">Service Zingage</option>
+<option value="autre">Autre Demande</option>
+</select>
+</div>
+<button class="w-full bg-tpm-orange hover:bg-orange-700 text-white font-bold py-3.5 px-4 rounded-lg transition duration-300 shadow-md" type="submit">
+                ENVOYER LA DEMANDE
+              </button>
+</form>
+</div>
+</div>
+<!-- Right Content: Showcase Card -->
+<div class="hidden lg:block relative" data-purpose="hero-showcase">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+<img alt="Stacked steel sheets inside Bekoko Factory" class="w-full h-auto object-cover aspect-[4/5] transform group-hover:scale-105 transition duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+<!-- Gradient Overlay for Badges -->
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy/90 via-transparent to-transparent"></div>
+<!-- Badges positioned on image -->
+<div class="absolute bottom-6 left-6 right-6 space-y-3">
+<div class="bg-tpm-slate/80 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-lg text-white font-semibold flex items-center justify-between">
+<span>Usine Bekoko</span>
+<span class="text-tpm-orange">1 500 m²</span>
+</div>
+<div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg text-tpm-navy font-bold flex items-center justify-between">
+<span>★ Certifié Conforme BTP</span>
+<span class="text-sm font-medium text-gray-500">Cameroun</span>
+</div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -z-10 -bottom-6 -right-6 w-full h-full border-2 border-tpm-orange/30 rounded-2xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Metrics Bar -->
+<section class="bg-tpm-slate border-t border-white/10" data-purpose="metrics-bar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+<!-- Metric 1 -->
+<div class="bg-tpm-navy rounded-xl p-6 border border-white/5 shadow-lg text-center transform hover:-translate-y-1 transition duration-300">
+<div class="text-3xl md:text-4xl font-extrabold text-tpm-orange mb-2 tracking-tight">1976</div>
+<div class="text-sm md:text-base font-semibold text-white uppercase tracking-wider">50 Ans d'Expertise</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-tpm-navy rounded-xl p-6 border border-white/5 shadow-lg text-center transform hover:-translate-y-1 transition duration-300">
+<div class="text-3xl md:text-4xl font-extrabold text-tpm-orange mb-2 tracking-tight">1 500 m²</div>
+<div class="text-sm md:text-base font-semibold text-white uppercase tracking-wider">Usine Bekoko</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-tpm-navy rounded-xl p-6 border border-white/5 shadow-lg text-center transform hover:-translate-y-1 transition duration-300">
+<div class="text-3xl md:text-4xl font-extrabold text-tpm-orange mb-2 tracking-tight">800 VA</div>
+<div class="text-sm md:text-base font-semibold text-white uppercase tracking-wider">Zingage Unique</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-tpm-navy rounded-xl p-6 border border-white/5 shadow-lg text-center transform hover:-translate-y-1 transition duration-300">
+<div class="text-3xl md:text-4xl font-extrabold text-tpm-orange mb-2 tracking-tight">100%</div>
+<div class="text-sm md:text-base font-semibold text-white uppercase tracking-wider">Local Transformation</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Metrics Bar -->
+<!-- ========================================== -->
+<!-- PART 2: EXPERTISE & PRODUCTS               -->
+<!-- ========================================== -->
+<!-- BEGIN: Expertise Section -->
+<section class="bg-slate-50 py-20 lg:py-28" data-purpose="expertise-section" id="expertise">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<h2 class="text-sm font-bold text-tpm-orange tracking-widest uppercase">Nos Pôles de Compétences</h2>
+<h3 class="text-3xl md:text-4xl font-extrabold text-tpm-navy">Expertise Industrielle Multi-Sectorielle</h3>
+<div class="w-24 h-1.5 bg-tpm-orange mx-auto rounded-full"></div>
+</div>
+<!-- Expertise Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Expertise Card 1 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-square bg-tpm-navy">
+<img alt="Tôles &amp; Couvertures" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy via-tpm-navy/50 to-transparent opacity-90"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Tôles &amp; Couvertures</h4>
+<div class="w-12 h-1 bg-tpm-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+</div>
+</div>
+<!-- Expertise Card 2 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-square bg-tpm-navy">
+<img alt="Accessoires &amp; Pliage" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform" src="https://lh3.googleusercontent.com/aida/AP1WRLvxA3bmlnpCj9hAdrZXF0GhQ6QFmKJCyfoxOpoLGmMi75iZOIfoCsx-ZLfwEm5_FNmLmbNNR5CkkfNZTtQo-sFwxuzqcHaBeN1az04AekOq7BQev2SRE5024i0-Qdmh6sk83Y7T7SIjb0wkTFAha2OYlqmdnKXAag04Gr6eYgm0o9WfJxMlT_bgOzq_b-FCQP0HKK7ABB6Vik8L-Y4TOsCxS8MhKk95DdA4WNx-2aSev29VRbACSNGBq4o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy via-tpm-navy/50 to-transparent opacity-90"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Accessoires &amp; Pliage</h4>
+<div class="w-12 h-1 bg-tpm-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+</div>
+</div>
+<!-- Expertise Card 3 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-square bg-tpm-navy">
+<img alt="Fixations" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform" src="https://lh3.googleusercontent.com/aida/AP1WRLsCzsghKOJLGW-wbOZJXQnnTjaE968pC6_BzEh1JjF6kXLe5rDBWy2Z5g9RyH2udHTM2YoCm1zi8wy3_ujgqkAf3RHDcAiO9VEDLlk4AGK7tW8Jq7TAeemA3pymz8SuhPEWY6qAheE-9vcdVog7LGg0Uia6fE54GXvHl4j8vyPBlRVot1BcvOAdd2dPmfnhsbMASA8E0_qni1VHowfZBvDLhyPPfgQC31f1J_UUvuml8ICmlORLpyy1ZdM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy via-tpm-navy/50 to-transparent opacity-90"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Fixations</h4>
+<div class="w-12 h-1 bg-tpm-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+</div>
+</div>
+<!-- Expertise Card 4 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-square bg-tpm-navy">
+<img alt="Plasturgie" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform" src="https://lh3.googleusercontent.com/aida/AP1WRLv23xRMFoeK6w9cR0acJA-LhO96FW_kBOEnmsSoKSOsDd5Ougdm8VDotR4WKHJJkfeVAWxqtJDqtuyH3BWrKdhbBqSo0ReEMfFzC2UI5TOLNH3XeJB2Oxl_X4UYH4Pe0RkdQMIG_XPzlnOWlUUKnsr2p_kfbdmnNkF7FJABxM3Pg_CH3f9-JwQNSD1ONlVQuk3swDqzWvlgUtdPzVz0Ft2vseBmBmbGPnBafn6hsWKoymNACToab-sOpDM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy via-tpm-navy/50 to-transparent opacity-90"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Plasturgie</h4>
+<div class="w-12 h-1 bg-tpm-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+</div>
+</div>
+<!-- Expertise Card 5 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-square bg-tpm-navy">
+<!-- Reusing an image as placeholder since only 5 were provided but 6 are needed. -->
+<img alt="Prestations Industrielles" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform" src="https://lh3.googleusercontent.com/aida/AP1WRLvcuEO2CrIdsmtypBV7F5nJhbQD3LsGEMH1vhQtG0kWcdEBbmtLm_uyvnI19d0-DUFlKwAn_K5ZDI0kIYxgrH7hYz5zfTzCBnRM_0amvqYlBOFk_PCHdilq7ebjragY0R-MHAE4IgZbnyX5B5PPcyblPTyRs4dEAp_sR9LRyrdVTahjLxFffa52nXHnB1bXnxgY62FWJbLLXAMx6EWAxB5dvkYdIiQlEYcoF9nb13nOWQUNyEmiJ7h-Ug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy via-tpm-navy/50 to-transparent opacity-90"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Prestations Industrielles</h4>
+<div class="w-12 h-1 bg-tpm-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+</div>
+</div>
+<!-- Expertise Card 6 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-square bg-tpm-navy">
+<!-- Reusing an image as placeholder. -->
+<img alt="Quincaillerie" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tpm-navy via-tpm-navy/50 to-transparent opacity-90"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Quincaillerie</h4>
+<div class="w-12 h-1 bg-tpm-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Expertise Section -->
+<!-- BEGIN: Products Section -->
+<section class="bg-white py-20 lg:py-28 border-t border-gray-200" data-purpose="products-section" id="catalogue">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="max-w-2xl space-y-4">
+<h2 class="text-sm font-bold text-tpm-orange tracking-widest uppercase">Catalogue 2026</h2>
+<h3 class="text-3xl md:text-4xl font-extrabold text-tpm-navy">Produits Phares</h3>
+</div>
+<a class="inline-flex items-center font-bold text-tpm-orange hover:text-orange-700 transition" href="#">
+          Télécharger le catalogue complet
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- Products Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Tôle BAC 0.50mm" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Tôle BAC 0.50mm</h4>
+<span class="text-sm text-gray-500 font-medium">Tôles &amp; Couvertures</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Fixation 6x80" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsCzsghKOJLGW-wbOZJXQnnTjaE968pC6_BzEh1JjF6kXLe5rDBWy2Z5g9RyH2udHTM2YoCm1zi8wy3_ujgqkAf3RHDcAiO9VEDLlk4AGK7tW8Jq7TAeemA3pymz8SuhPEWY6qAheE-9vcdVog7LGg0Uia6fE54GXvHl4j8vyPBlRVot1BcvOAdd2dPmfnhsbMASA8E0_qni1VHowfZBvDLhyPPfgQC31f1J_UUvuml8ICmlORLpyy1ZdM"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Fixation 6x80</h4>
+<span class="text-sm text-gray-500 font-medium">Fixations</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Faîtière 0.33" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvxA3bmlnpCj9hAdrZXF0GhQ6QFmKJCyfoxOpoLGmMi75iZOIfoCsx-ZLfwEm5_FNmLmbNNR5CkkfNZTtQo-sFwxuzqcHaBeN1az04AekOq7BQev2SRE5024i0-Qdmh6sk83Y7T7SIjb0wkTFAha2OYlqmdnKXAag04Gr6eYgm0o9WfJxMlT_bgOzq_b-FCQP0HKK7ABB6Vik8L-Y4TOsCxS8MhKk95DdA4WNx-2aSev29VRbACSNGBq4o"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Faîtière 0.33</h4>
+<span class="text-sm text-gray-500 font-medium">Accessoires &amp; Pliage</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Sacs PP 50kg" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLv23xRMFoeK6w9cR0acJA-LhO96FW_kBOEnmsSoKSOsDd5Ougdm8VDotR4WKHJJkfeVAWxqtJDqtuyH3BWrKdhbBqSo0ReEMfFzC2UI5TOLNH3XeJB2Oxl_X4UYH4Pe0RkdQMIG_XPzlnOWlUUKnsr2p_kfbdmnNkF7FJABxM3Pg_CH3f9-JwQNSD1ONlVQuk3swDqzWvlgUtdPzVz0Ft2vseBmBmbGPnBafn6hsWKoymNACToab-sOpDM"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Sacs PP 50kg</h4>
+<span class="text-sm text-gray-500 font-medium">Plasturgie</span>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Joints Bitumés" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Bu95P-HI8ALpPVPpdK1pzbpPbTILYyf0WfLlU9q1xj_gUDozChzPgcIR6dBQSt9YLYQC-7bY7oGk2QwtFUgSkMFaeTh0xF8t4PC8B88jinS1p7XMDZpANSXzG1BJPYgdU2s1t9_gZ9uh6e92Tvvv3-w1SdC0f4-tuOlSPp--hB9nFBW12gPfl-ULOhfvsG4VZeqvRgzfv5gBRyIE1OZX6b6xXAFePy6s0jLQIQFdCbYrTiKdNMLF"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Joints Bitumés</h4>
+<span class="text-sm text-gray-500 font-medium">Accessoires</span>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Éponges Métalliques" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-cL5fZAUJkPwT-LGDOD0V71U51ao714moAHXuR4FaU0JJXH28RfiQEshQsRInJuTbZobHNze-l5Yli11XmS_gQSw24WQ1DqIRlGeO1GbCjJLWyuBUKHLHrFTdrv8RcHbbFCmvV7DnFYDKh0mP6_UaTHUIbRSp2vaWQ_lMTwpDXMwAUO9wq_C-opGhrDIcTwlze3KcGryZDG5X2a-IXhk96dGed8waTNFcBTvziV_wlNx3Y6Y5Aw2F"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Éponges Métalliques</h4>
+<span class="text-sm text-gray-500 font-medium">Quincaillerie</span>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Pointes Torsadées" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCptGyw4CSg5H-h7bRnXKmwE2kybAAl9l8COfVPqPhZnUgUbMSzYmUNMXizqldJN8VyuR8gwrLeY_WK4tbVldLyjHoDQ7xxxT8nyIt7D4e0C6cqVndeIpxIpaDnlsn2-Z44fRNHrq7UC7mHyFqStl0bk1BLVp2N_vpr8OT1AbcyRw3_546yFoFfLnDIhjecHDxxziyTgg9c5obhi4s9bzSclQoQduddXZ99ZmHeop7NxBf8ry16Qc23"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Pointes Torsadées</h4>
+<span class="text-sm text-gray-500 font-medium">Fixations</span>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group bg-slate-50 border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col relative">
+<!-- Special styling for Service -->
+<div class="absolute top-4 right-4 bg-tpm-orange text-white text-xs font-bold px-2 py-1 rounded z-10 uppercase tracking-wide">Service</div>
+<div class="aspect-square relative overflow-hidden bg-gray-200">
+<img alt="Service Zingage 800 VA" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvcuEO2CrIdsmtypBV7F5nJhbQD3LsGEMH1vhQtG0kWcdEBbmtLm_uyvnI19d0-DUFlKwAn_K5ZDI0kIYxgrH7hYz5zfTzCBnRM_0amvqYlBOFk_PCHdilq7ebjragY0R-MHAE4IgZbnyX5B5PPcyblPTyRs4dEAp_sR9LRyrdVTahjLxFffa52nXHnB1bXnxgY62FWJbLLXAMx6EWAxB5dvkYdIiQlEYcoF9nb13nOWQUNyEmiJ7h-Ug"/>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<h4 class="font-bold text-tpm-navy text-lg mb-2">Service Zingage 800 VA</h4>
+<span class="text-sm text-gray-500 font-medium">Prestations Industrielles</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Products Section -->
+<!-- ========================================== -->
+<!-- PART 3: FACTORY & DOCUMENTATION            -->
+<!-- ========================================== -->
+<!-- BEGIN: Factory Full Width Image Section -->
+<section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden" data-purpose="factory-showcase" id="usine">
+<div class="absolute inset-0 z-0">
+<img alt="L'Usine de Bekoko (Douala) floor" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+<div class="absolute inset-0 bg-tpm-navy/60 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight uppercase shadow-sm">
+        L'Usine de Bekoko <span class="text-tpm-orange block sm:inline">(Douala)</span>
+</h2>
+<div class="mt-6 w-24 h-2 bg-tpm-orange mx-auto rounded-full"></div>
+</div>
+</section>
+<!-- END: Factory Full Width Image Section -->
+<!-- BEGIN: Realizations Section -->
+<section class="bg-slate-50 py-20 lg:py-28 border-b border-gray-200" data-purpose="realizations-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<h2 class="text-sm font-bold text-tpm-orange tracking-widest uppercase">Nos Réalisations</h2>
+<h3 class="text-3xl md:text-4xl font-extrabold text-tpm-navy">La Confiance des Grands Chantiers</h3>
+</div>
+<!-- Realizations Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Stade Omnisports" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo9LADhZavEX3n5MruQDat0x5xDq53O1Cs_gTamtStLwdehouXME2vMtGqClPPkOk9lxzTwBlbXFUeolf0Ui3hM08li37fU9hoesuCTIvdWfFWM-XR3YP2g61iHsQKxkhrKPxbksfp_byn7PR2ErTduk5EJ4LixH6m7q0BoP-QLEkAqE_mase8OxtGGKsKPOs_BV0TM5IRNtHTzmacDZvmkkwWCYCUjT5xMkMgBhvGVUmjkHEq7UCY"/>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold text-tpm-navy mb-2">Stade Omnisports</h4>
+<p class="text-gray-600 text-sm">Fourniture de structures métalliques et tôles de couverture.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Complexe Logistique Portuaire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt0ACKncANmNX9hBI_EMaczkYL-yAzMc6MvFNK6EvYOeUGMvu2xHfK2o4dzpQI8EKHSJFLgALoHfrl4lQt5LCKKEF8kjx1XFjb8BAErOC5cE4aFLTYTGL67mj5zSbegg0-WV2ME-5YHV7rKbPJBj7vHwljSJRtNUO2epOlz2WEc6pyf_aNhAALnVLHeuNeKA5hsOeL18R9fcO9RFcZNYn3uDUQL8-PcKQELwwgXf_9R2OcESEknj7D"/>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold text-tpm-navy mb-2">Complexe Logistique Portuaire</h4>
+<p class="text-gray-600 text-sm">Solutions de bardage industriel et fixations lourdes.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Unité de Transformation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbSTBs26zXcMDBq2uR4nEkuRupgiQeaSJlEjZgEcpsvmI8nDHXd0iBcJSbD1Qc0gupotdDGQw-gmh-GKr5yoAyPxRqwPGeBXnY40IF6pkocrtIlAn2NBiBW-mieGRS9W4ltOpdoToMBQH8bMh6dbo0hQT-WE2mrs_vRmapdfEr8fg8FbjrVwykdCljpoeceY3qO_iqLRcXiZhO4lZdydXRX3Nrh86QqqHM18usQOFkfalUKteas9CJ"/>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold text-tpm-navy mb-2">Unité de Transformation</h4>
+<p class="text-gray-600 text-sm">Zingage sur mesure pour équipements exposés.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Realizations Section -->
+<!-- BEGIN: Documentation & FAQ Section -->
+<section class="bg-white py-20 lg:py-28" data-purpose="doc-faq-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Left: Documentation -->
+<div class="space-y-8">
+<div>
+<h2 class="text-sm font-bold text-tpm-orange tracking-widest uppercase mb-2">Ressources</h2>
+<h3 class="text-3xl font-extrabold text-tpm-navy">Espace Documentaire</h3>
+</div>
+<div class="space-y-4">
+<!-- Doc Item 1 -->
+<a class="flex items-center p-5 bg-slate-50 border border-gray-200 rounded-xl hover:border-tpm-orange hover:shadow-md transition group" href="#">
+<div class="w-12 h-12 bg-tpm-navy/10 rounded-lg flex items-center justify-center text-tpm-navy font-bold text-xl mr-5 group-hover:bg-tpm-orange group-hover:text-white transition-colors">
+                PDF
+              </div>
+<div class="flex-grow">
+<h4 class="text-lg font-bold text-tpm-navy group-hover:text-tpm-orange transition-colors">Catalogue Général 2026</h4>
+<p class="text-sm text-gray-500">Gamme complète des produits et services (15 Mo)</p>
+</div>
+<div class="text-gray-400 group-hover:text-tpm-orange transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</a>
+<!-- Doc Item 2 -->
+<a class="flex items-center p-5 bg-slate-50 border border-gray-200 rounded-xl hover:border-tpm-orange hover:shadow-md transition group" href="#">
+<div class="w-12 h-12 bg-tpm-navy/10 rounded-lg flex items-center justify-center text-tpm-navy font-bold text-xl mr-5 group-hover:bg-tpm-orange group-hover:text-white transition-colors">
+                DOC
+              </div>
+<div class="flex-grow">
+<h4 class="text-lg font-bold text-tpm-navy group-hover:text-tpm-orange transition-colors">Fiches Techniques</h4>
+<p class="text-sm text-gray-500">Spécifications détaillées par produit (ZIP)</p>
+</div>
+<div class="text-gray-400 group-hover:text-tpm-orange transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</a>
+<!-- Doc Item 3 -->
+<a class="flex items-center p-5 bg-slate-50 border border-gray-200 rounded-xl hover:border-tpm-orange hover:shadow-md transition group" href="#">
+<div class="w-12 h-12 bg-tpm-navy/10 rounded-lg flex items-center justify-center text-tpm-navy font-bold text-xl mr-5 group-hover:bg-tpm-orange group-hover:text-white transition-colors">
+                CRT
+              </div>
+<div class="flex-grow">
+<h4 class="text-lg font-bold text-tpm-navy group-hover:text-tpm-orange transition-colors">Certificat PME &amp; Conformité</h4>
+<p class="text-sm text-gray-500">Attestations officielles (PDF)</p>
+</div>
+<div class="text-gray-400 group-hover:text-tpm-orange transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</a>
+</div>
+</div>
+<!-- Right: FAQ Accordion -->
+<div class="space-y-8">
+<div>
+<h2 class="text-sm font-bold text-tpm-orange tracking-widest uppercase mb-2">Support</h2>
+<h3 class="text-3xl font-extrabold text-tpm-navy">Questions Fréquentes</h3>
+</div>
+<div class="space-y-4" data-purpose="faq-accordion">
+<!-- FAQ Item 1 -->
+<details class="group border border-gray-200 bg-slate-50 rounded-xl [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 text-tpm-navy font-bold">
+<h4 class="text-lg">Comment obtenir une Pro-Forma ?</h4>
+<span class="relative ml-4 h-5 w-5 flex-shrink-0">
+<span class="absolute inset-0 bg-tpm-navy rounded-sm h-0.5 mt-2 transition-transform duration-300 group-open:rotate-180"></span>
+<span class="absolute inset-0 bg-tpm-navy rounded-sm w-0.5 ml-2 transition-transform duration-300 group-open:rotate-90"></span>
+</span>
+</summary>
+<div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-200 pt-4">
+                Vous pouvez utiliser notre formulaire de "Demande Flash" en haut de page, nous contacter via WhatsApp, ou envoyer une demande formelle à notre service commercial par email. Une réponse vous sera apportée sous 24h ouvrées.
+              </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group border border-gray-200 bg-slate-50 rounded-xl [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 text-tpm-navy font-bold">
+<h4 class="text-lg">Quels sont les délais et modes de livraison ?</h4>
+<span class="relative ml-4 h-5 w-5 flex-shrink-0">
+<span class="absolute inset-0 bg-tpm-navy rounded-sm h-0.5 mt-2 transition-transform duration-300 group-open:rotate-180"></span>
+<span class="absolute inset-0 bg-tpm-navy rounded-sm w-0.5 ml-2 transition-transform duration-300 group-open:rotate-90"></span>
+</span>
+</summary>
+<div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-200 pt-4">
+                Les délais varient selon le volume et la disponibilité en stock (généralement 48h à 72h). Nous proposons la livraison sur chantier pour les gros volumes via nos camions plateaux, sur devis.
+              </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group border border-gray-200 bg-slate-50 rounded-xl [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 text-tpm-navy font-bold">
+<h4 class="text-lg">Le retrait direct à l'usine de Bekoko est-il possible ?</h4>
+<span class="relative ml-4 h-5 w-5 flex-shrink-0">
+<span class="absolute inset-0 bg-tpm-navy rounded-sm h-0.5 mt-2 transition-transform duration-300 group-open:rotate-180"></span>
+<span class="absolute inset-0 bg-tpm-navy rounded-sm w-0.5 ml-2 transition-transform duration-300 group-open:rotate-90"></span>
+</span>
+</summary>
+<div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-200 pt-4">
+                Oui, le retrait usine est privilégié (Ex-Works). Après confirmation de votre commande et de son conditionnement, notre service logistique vous communiquera un bon d'enlèvement pour présenter votre camion à notre zone de chargement à Bekoko.
+              </div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Documentation & FAQ Section -->
+</body></html><!-- END: TPM SA Body Architecture -->

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TPM SA - Pro-Forma Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#49406f",
+                        "primary-fixed": "#e6deff",
+                        "on-surface-variant": "#48454e",
+                        "surface-container-highest": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-surface": "#131b2e",
+                        "background": "#faf8ff",
+                        "outline-variant": "#c9c4cf",
+                        "surface": "#faf8ff",
+                        "on-secondary-fixed": "#3b0900",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#283044",
+                        "secondary": "#b02f00",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e2e7ff",
+                        "on-background": "#131b2e",
+                        "on-secondary-container": "#5c1400",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#862200",
+                        "tertiary-fixed": "#e0e3e5",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-container-low": "#f2f3ff",
+                        "tertiary-container": "#191c1e",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#cabff7",
+                        "surface-container": "#eaedff",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-fixed": "#1d1441",
+                        "outline": "#79757f",
+                        "primary-fixed-dim": "#cabff7",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-tint": "#615888",
+                        "secondary-fixed": "#ffdbd1",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#877db0",
+                        "primary-container": "#1d1441",
+                        "surface-variant": "#dae2fd",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d2d9f4",
+                        "on-tertiary-container": "#818486",
+                        "secondary-container": "#fd6537",
+                        // Brand Specific Overrides to match requested spec exactly, falling back to JSON where possible
+                        "brand-navy": "#1C1340",
+                        "brand-terracotta": "#D84B1F",
+                        "brand-slate": "#0F172A",
+                        "brand-surface": "#F8FAFC",
+                        "brand-border": "#E2E8F0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "unit-1": "0.25rem",
+                        "unit-2": "0.5rem",
+                        "gutter": "24px",
+                        "unit-8": "2rem",
+                        "unit-4": "1rem",
+                        "unit-6": "1.5rem",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "unit-12": "3rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "technical-data": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "technical-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .table-zebra tr:nth-child(even) { background-color: #F8FAFC; }
+        .table-zebra tr:nth-child(odd) { background-color: #ffffff; }
+    </style>
+</head>
+<body class="bg-brand-surface font-body-md text-brand-slate antialiased">
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-unit-8">
+<!-- 1. CHECKOUT PROGRESS STEPPER BAR -->
+<nav aria-label="Checkout Progress" class="w-full bg-brand-surface border-b border-brand-border pb-unit-4 mb-unit-8">
+<ol class="flex flex-col md:flex-row md:items-center md:justify-between w-full space-y-unit-2 md:space-y-0">
+<li class="flex items-center text-brand-terracotta font-headline-md text-headline-md-mobile md:text-headline-md font-bold">
+<span class="mr-unit-2">1. Récapitulatif Panier</span>
+<span class="material-symbols-outlined hidden md:block mx-unit-4 text-outline-variant">chevron_right</span>
+</li>
+<li class="flex items-center text-brand-navy font-headline-md text-headline-md-mobile md:text-headline-md opacity-50">
+<span class="mr-unit-2">2. Identification B2B &amp; NIU</span>
+<span class="material-symbols-outlined hidden md:block mx-unit-4 text-outline-variant">chevron_right</span>
+</li>
+<li class="flex items-center text-brand-navy font-headline-md text-headline-md-mobile md:text-headline-md opacity-50">
+<span class="mr-unit-2">3. Option Logistique Usine</span>
+<span class="material-symbols-outlined hidden md:block mx-unit-4 text-outline-variant">chevron_right</span>
+</li>
+<li class="flex items-center text-brand-navy font-headline-md text-headline-md-mobile md:text-headline-md opacity-50">
+<span>4. Émission Pro-Forma PDF</span>
+</li>
+</ol>
+</nav>
+<!-- 2. MAIN CHECKOUT GRID -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-8">
+<!-- LEFT COLUMN -->
+<div class="lg:col-span-8 flex flex-col gap-unit-8">
+<!-- SECTION A: Tableau Récapitulatif du Panier -->
+<section class="bg-white border border-brand-border rounded-DEFAULT shadow-sm">
+<div class="bg-brand-navy p-unit-4 rounded-t-DEFAULT">
+<h2 class="text-white font-headline-md text-headline-md m-0">Tableau Récapitulatif du Panier</h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse table-zebra">
+<thead class="border-b border-brand-border font-label-caps text-label-caps text-brand-navy uppercase bg-white">
+<tr>
+<th class="p-unit-4 min-w-[300px]">Article &amp; Référence</th>
+<th class="p-unit-4">Spécifications</th>
+<th class="p-unit-4 text-right">Quantité</th>
+<th class="p-unit-4 text-right">Total HT (FCFA)</th>
+</tr>
+</thead>
+<tbody class="font-technical-data text-technical-data">
+<!-- Item 1 -->
+<tr class="border-b border-brand-border">
+<td class="p-unit-4">
+<div class="flex items-center gap-unit-4">
+<div class="w-16 h-16 shrink-0 bg-brand-surface border border-brand-border overflow-hidden">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+</div>
+<div>
+<span class="block font-bold text-brand-navy">Tôle BAC 0.50mm Prélaquée Bordeau</span>
+<span class="text-brand-slate text-body-sm block">Réf: TBP_BOR_B30_4N</span>
+</div>
+</div>
+</td>
+<td class="p-unit-4">Longueur: 6.00m</td>
+<td class="p-unit-4 text-right">
+<div class="inline-flex items-center border border-brand-border rounded-DEFAULT bg-white">
+<button aria-label="Decrease quantity" class="px-2 py-1 text-brand-slate hover:bg-brand-surface" type="button">-</button>
+<input aria-label="Quantity" class="w-10 text-center border-0 p-0 text-brand-navy font-bold focus:ring-0" type="text" value="20"/>
+<button aria-label="Increase quantity" class="px-2 py-1 text-brand-slate hover:bg-brand-surface" type="button">+</button>
+</div>
+</td>
+<td class="p-unit-4 text-right font-bold text-brand-navy">650 000</td>
+</tr>
+<!-- Item 2 -->
+<tr class="border-b border-brand-border">
+<td class="p-unit-4">
+<div class="flex items-center gap-unit-4">
+<div class="w-16 h-16 shrink-0 bg-brand-surface border border-brand-border overflow-hidden">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvxA3bmlnpCj9hAdrZXF0GhQ6QFmKJCyfoxOpoLGmMi75iZOIfoCsx-ZLfwEm5_FNmLmbNNR5CkkfNZTtQo-sFwxuzqcHaBeN1az04AekOq7BQev2SRE5024i0-Qdmh6sk83Y7T7SIjb0wkTFAha2OYlqmdnKXAag04Gr6eYgm0o9WfJxMlT_bgOzq_b-FCQP0HKK7ABB6Vik8L-Y4TOsCxS8MhKk95DdA4WNx-2aSev29VRbACSNGBq4o"/>
+</div>
+<div>
+<span class="block font-bold text-brand-navy">Fixation Complète 6x80 Bordeau</span>
+<span class="text-brand-slate text-body-sm block">Réf: FIXCOM_BORD680</span>
+</div>
+</div>
+</td>
+<td class="p-unit-4">Boîte de 100p</td>
+<td class="p-unit-4 text-right">
+<div class="inline-flex items-center border border-brand-border rounded-DEFAULT bg-white">
+<button class="px-2 py-1 text-brand-slate hover:bg-brand-surface" type="button">-</button>
+<input class="w-10 text-center border-0 p-0 text-brand-navy font-bold focus:ring-0" type="text" value="5"/>
+<button class="px-2 py-1 text-brand-slate hover:bg-brand-surface" type="button">+</button>
+</div>
+</td>
+<td class="p-unit-4 text-right font-bold text-brand-navy">12 500</td>
+</tr>
+<!-- Item 3 -->
+<tr>
+<td class="p-unit-4">
+<div class="flex items-center gap-unit-4">
+<div class="w-16 h-16 shrink-0 bg-brand-surface border border-brand-border overflow-hidden">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLv23xRMFoeK6w9cR0acJA-LhO96FW_kBOEnmsSoKSOsDd5Ougdm8VDotR4WKHJJkfeVAWxqtJDqtuyH3BWrKdhbBqSo0ReEMfFzC2UI5TOLNH3XeJB2Oxl_X4UYH4Pe0RkdQMIG_XPzlnOWlUUKnsr2p_kfbdmnNkF7FJABxM3Pg_CH3f9-JwQNSD1ONlVQuk3swDqzWvlgUtdPzVz0Ft2vseBmBmbGPnBafn6hsWKoymNACToab-sOpDM"/>
+</div>
+<div>
+<span class="block font-bold text-brand-navy">Joints d'Étanchéité Bitumés 1976</span>
+<span class="text-brand-slate text-body-sm block">Réf: RONDEL2</span>
+</div>
+</div>
+</td>
+<td class="p-unit-4">Sachet de 100p</td>
+<td class="p-unit-4 text-right">
+<div class="inline-flex items-center border border-brand-border rounded-DEFAULT bg-white">
+<button class="px-2 py-1 text-brand-slate hover:bg-brand-surface" type="button">-</button>
+<input class="w-10 text-center border-0 p-0 text-brand-navy font-bold focus:ring-0" type="text" value="5"/>
+<button class="px-2 py-1 text-brand-slate hover:bg-brand-surface" type="button">+</button>
+</div>
+</td>
+<td class="p-unit-4 text-right font-bold text-brand-navy">7 500</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION B: Formulaire d'Identification Client -->
+<section class="bg-white border border-brand-border rounded-DEFAULT shadow-sm">
+<div class="bg-brand-navy p-unit-4 rounded-t-DEFAULT">
+<h2 class="text-white font-headline-md text-headline-md m-0">Identification Client</h2>
+</div>
+<div class="p-unit-4 md:p-unit-6">
+<div class="flex items-center gap-unit-6 mb-unit-6 border-b border-brand-border pb-unit-4">
+<label class="flex items-center gap-2 cursor-pointer font-bold text-brand-navy">
+<input checked="" class="text-brand-terracotta focus:ring-brand-terracotta h-4 w-4 border-brand-border" name="client_type" type="radio" value="b2b"/>
+                                Compte B2B (Entreprise)
+                            </label>
+<label class="flex items-center gap-2 cursor-pointer font-body-md text-brand-slate">
+<input class="text-brand-terracotta focus:ring-brand-terracotta h-4 w-4 border-brand-border" name="client_type" type="radio" value="b2c"/>
+                                Compte B2C (Particulier)
+                            </label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-4">
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1" for="raison_sociale">Raison Sociale *</label>
+<input class="w-full border border-brand-border rounded-DEFAULT p-2 focus:border-brand-terracotta focus:ring-0 bg-white" id="raison_sociale" placeholder="Nom de l'entreprise" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1" for="niu">Numéro d'Identifiant Unique (NIU) *</label>
+<input class="w-full border border-brand-border rounded-DEFAULT p-2 focus:border-brand-terracotta focus:ring-0 bg-white" id="niu" placeholder="Obligatoire pour B2B" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1" for="rccm">RCCM</label>
+<input class="w-full border border-brand-border rounded-DEFAULT p-2 focus:border-brand-terracotta focus:ring-0 bg-white" id="rccm" placeholder="RC/XYZ/1234" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1" for="responsable">Nom du Responsable Achats *</label>
+<input class="w-full border border-brand-border rounded-DEFAULT p-2 focus:border-brand-terracotta focus:ring-0 bg-white" id="responsable" placeholder="Prénom et Nom" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1" for="telephone">Téléphone WhatsApp *</label>
+<input class="w-full border border-brand-border rounded-DEFAULT p-2 focus:border-brand-terracotta focus:ring-0 bg-white" id="telephone" placeholder="+237..." type="tel"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-slate mb-1" for="email">Email Professionnel *</label>
+<input class="w-full border border-brand-border rounded-DEFAULT p-2 focus:border-brand-terracotta focus:ring-0 bg-white" id="email" placeholder="contact@entreprise.cm" type="email"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION C: Option Logistique Usine -->
+<section class="bg-white border border-brand-border rounded-DEFAULT shadow-sm">
+<div class="bg-brand-navy p-unit-4 rounded-t-DEFAULT">
+<h2 class="text-white font-headline-md text-headline-md m-0">Option Logistique Usine</h2>
+</div>
+<div class="p-unit-4 md:p-unit-6 flex flex-col gap-unit-4">
+<label class="flex items-start gap-unit-4 p-unit-4 border border-brand-terracotta bg-surface-container-low rounded-DEFAULT cursor-pointer relative">
+<input checked="" class="mt-1 text-brand-terracotta focus:ring-brand-terracotta h-4 w-4 border-brand-border" name="logistique" type="radio" value="usine"/>
+<div>
+<span class="block font-bold text-brand-navy">Retrait Direct à l'Usine de Bekoko</span>
+<span class="block text-brand-slate text-body-sm mt-1">Gratuit. Chargement immédiat sur présentation du bon de commande.</span>
+</div>
+<span class="absolute top-unit-4 right-unit-4 bg-brand-terracotta text-white font-label-caps text-label-caps px-2 py-1 rounded-sm">GRATUIT</span>
+</label>
+<label class="flex items-start gap-unit-4 p-unit-4 border border-brand-border rounded-DEFAULT cursor-pointer hover:bg-brand-surface transition-colors">
+<input class="mt-1 text-brand-terracotta focus:ring-brand-terracotta h-4 w-4 border-brand-border" name="logistique" type="radio" value="chantier"/>
+<div>
+<span class="block font-bold text-brand-navy">Livraison sur Chantier</span>
+<span class="block text-brand-slate text-body-sm mt-1">Sur devis logistique. Nécessite une confirmation par un commercial.</span>
+</div>
+</label>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (Pro-Forma Summary Box) -->
+<aside class="lg:col-span-4">
+<div class="bg-white border-2 border-brand-navy rounded-DEFAULT shadow-sm sticky top-unit-4">
+<div class="p-unit-6">
+<h2 class="font-headline-md text-headline-md text-brand-navy mb-unit-6 pb-unit-4 border-b border-brand-border">Récapitulatif Financier Pro-Forma</h2>
+<div class="space-y-unit-4 font-technical-data text-technical-data">
+<div class="flex justify-between items-center text-brand-slate">
+<span>Total des articles HT</span>
+<span class="font-bold">670 000 FCFA</span>
+</div>
+<div class="flex justify-between items-center text-brand-slate">
+<span>TVA Officielle (19.25%)</span>
+<span>128 975 FCFA</span>
+</div>
+<div class="flex justify-between items-center text-brand-slate">
+<span>Frais de Manutention</span>
+<span class="text-brand-terracotta">Inclus</span>
+</div>
+</div>
+<div class="my-unit-6 pt-unit-4 border-t border-brand-border">
+<div class="flex justify-between items-end">
+<span class="font-headline-md text-headline-md-mobile text-brand-navy font-bold">TOTAL GÉNÉRAL TTC</span>
+<span class="font-headline-md text-headline-md text-brand-navy font-extrabold">798 975 FCFA</span>
+</div>
+</div>
+<div class="bg-surface-container-high border border-outline-variant rounded-DEFAULT p-unit-2 mb-unit-6 flex items-center justify-center text-center">
+<span class="font-label-caps text-label-caps text-brand-navy tracking-wide">Conforme à la législation fiscale du Cameroun</span>
+</div>
+<div class="flex flex-col gap-unit-4">
+<button class="w-full bg-brand-terracotta hover:bg-on-secondary-fixed-variant text-white font-bold py-unit-4 px-unit-4 rounded-DEFAULT transition-colors duration-200 text-center font-body-md shadow-sm">
+                                GÉNÉRER MA FACTURE PRO-FORMA PDF<br/>
+<span class="text-sm opacity-90 font-normal">(TPM-2026-XXXX)</span>
+</button>
+<a class="w-full border border-brand-border bg-white hover:bg-brand-surface text-brand-navy font-bold py-unit-2 px-unit-4 rounded-DEFAULT transition-colors duration-200 text-center flex items-center justify-center gap-2" href="#">
+<span class="text-green-600">■</span> Valider mon panier avec un Commercial Usine
+                            </a>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- 3. LEGAL FOOTER STRIP -->
+<div class="w-full bg-brand-navy text-white mt-unit-8 p-unit-4 text-center rounded-DEFAULT shadow-sm">
+<p class="font-body-sm text-body-sm opacity-90">Document Officiel avec TVA valable 30 jours pour vos démarches bancaires et comptables. Émis par TPM SA (Groupe CAC - Douala PK12 / Bekoko).</p>
+</div>
+</main>
+</body></html>

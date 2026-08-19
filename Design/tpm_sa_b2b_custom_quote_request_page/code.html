@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Demande de Devis B2B | TPM SA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#818486",
+                    "surface-variant": "#dae2fd",
+                    "on-primary-fixed-variant": "#49406f",
+                    "surface-bright": "#faf8ff",
+                    "surface": "#faf8ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-container": "#eaedff",
+                    "surface-container-highest": "#dae2fd",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-container-high": "#e2e7ff",
+                    "secondary": "#b02f00",
+                    "on-surface-variant": "#48454e",
+                    "primary-container": "#1d1441",
+                    "secondary-fixed": "#ffdbd1",
+                    "secondary-container": "#fd6537",
+                    "tertiary": "#000000",
+                    "tertiary-container": "#191c1e",
+                    "on-background": "#131b2e",
+                    "tertiary-fixed": "#e0e3e5",
+                    "background": "#faf8ff",
+                    "primary-fixed-dim": "#cabff7",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#5c1400",
+                    "inverse-surface": "#283044",
+                    "on-primary-fixed": "#1d1441",
+                    "error-container": "#ffdad6",
+                    "outline": "#79757f",
+                    "on-surface": "#131b2e",
+                    "on-primary-container": "#877db0",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#3b0900",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "inverse-primary": "#cabff7",
+                    "surface-container-low": "#f2f3ff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#000000",
+                    "on-secondary-fixed-variant": "#862200",
+                    "primary-fixed": "#e6deff",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "surface-tint": "#615888",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d2d9f4",
+                    "outline-variant": "#c9c4cf",
+                    "brand-navy": "#1C1340",
+                    "brand-terracotta": "#D84B1F",
+                    "brand-charcoal": "#0F172A",
+                    "brand-border": "#E2E8F0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit-12": "3rem",
+                    "unit-8": "2rem",
+                    "gutter": "24px",
+                    "unit-1": "0.25rem",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "unit-6": "1.5rem",
+                    "unit-4": "1rem",
+                    "unit-2": "0.5rem",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "technical-data": [
+                            "JetBrains Mono", "monospace"
+                    ],
+                    "headline-md": [
+                            "Inter", "sans-serif"
+                    ],
+                    "body-sm": [
+                            "Inter", "sans-serif"
+                    ],
+                    "headline-lg-mobile": [
+                            "Inter", "sans-serif"
+                    ],
+                    "label-caps": [
+                            "Inter", "sans-serif"
+                    ],
+                    "display-lg": [
+                            "Inter", "sans-serif"
+                    ],
+                    "body-lg": [
+                            "Inter", "sans-serif"
+                    ],
+                    "headline-lg": [
+                            "Inter", "sans-serif"
+                    ],
+                    "body-md": [
+                            "Inter", "sans-serif"
+                    ]
+            },
+            "fontSize": {
+                    "technical-data": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #D84B1F !important;
+            box-shadow: none !important;
+        }
+        .custom-radio:checked + div {
+            border-color: #D84B1F;
+            background-color: #fef2f2;
+        }
+        .custom-radio:checked + div .radio-dot {
+            background-color: #D84B1F;
+            border-color: #D84B1F;
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-on-surface antialiased">
+<!-- 1. HERO BANNER DEVIS B2B -->
+<section class="relative w-full h-[400px] md:h-[500px] bg-brand-charcoal overflow-hidden flex items-center">
+<!-- Background Image with Gradient Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-brand-charcoal/90 to-brand-navy/60 z-10 mix-blend-multiply"></div>
+<img alt="Heavy industrial steel laser cutting machine" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvcuEO2CrIdsmtypBV7F5nJhbQD3LsGEMH1vhQtG0kWcdEBbmtLm_uyvnI19d0-DUFlKwAn_K5ZDI0kIYxgrH7hYz5zfTzCBnRM_0amvqYlBOFk_PCHdilq7ebjragY0R-MHAE4IgZbnyX5B5PPcyblPTyRs4dEAp_sR9LRyrdVTahjLxFffa52nXHnB1bXnxgY62FWJbLLXAMx6EWAxB5dvkYdIiQlEYcoF9nb13nOWQUNyEmiJ7h-Ug"/>
+</div>
+<div class="relative z-20 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-brand-terracotta uppercase tracking-wider mb-unit-4 block">Portail Client TPM SA</span>
+<h1 class="font-display-lg text-display-lg text-on-primary mb-unit-6 text-3xl md:text-5xl">COTATION SUR-MESURE &amp; PROJETS INDUSTRIELS</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl border-l-4 border-brand-terracotta pl-unit-4">
+                    Configuration technique pour chantiers BTP, profilage spécial et commandes en gros volume.
+                </p>
+</div>
+</div>
+</section>
+<!-- MAIN CONTENT GRID -->
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-unit-12">
+<form action="#" class="grid grid-cols-1 lg:grid-cols-12 gap-unit-8 items-start" method="POST">
+<!-- LEFT COLUMN: FORMS -->
+<div class="lg:col-span-8 flex flex-col gap-unit-8">
+<!-- 2. CONFIGURATEUR TECHNIQUE -->
+<section class="bg-surface-container-lowest border border-brand-border rounded-lg shadow-sm overflow-hidden">
+<div class="h-48 md:h-64 w-full relative">
+<img alt="Stacked premium corrugated steel roof sheets" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-unit-4">
+<h2 class="font-headline-md text-headline-md text-on-primary">Détails Techniques</h2>
+</div>
+</div>
+<div class="p-unit-6 md:p-unit-8 flex flex-col gap-unit-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-6">
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="project-type">Type de Projet <span class="text-error">*</span></label>
+<select class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-body-md text-body-md text-brand-charcoal form-select" id="project-type" name="project-type">
+<option disabled="" selected="" value="">Sélectionner une option</option>
+<option value="toles">Tôles de Couverture / Pliage</option>
+<option value="piles">Piles et Fondations</option>
+<option value="structures">Structures Métalliques</option>
+<option value="charpente">Charpente Lourde</option>
+</select>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="material">Matériau Spécifique</label>
+<select class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-body-md text-body-md text-brand-charcoal form-select" id="material" name="material">
+<option disabled="" selected="" value="">Standard (Aluzinc)</option>
+<option value="aluzinc">Aluzinc 0.50mm</option>
+<option value="galva">Acier Galvanisé</option>
+<option value="prelaque">Acier Prélaqué</option>
+</select>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="thickness">Épaisseur (mm) <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-technical-data text-technical-data text-brand-charcoal form-input" id="thickness" min="0" name="thickness" placeholder="Ex: 0.50" step="0.01" type="number"/>
+<span class="absolute right-unit-4 top-1/2 transform -translate-y-1/2 font-technical-data text-outline text-sm">mm</span>
+</div>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="length">Longueur Totale Estimée (m)</label>
+<div class="relative">
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-technical-data text-technical-data text-brand-charcoal form-input" id="length" min="0" name="length" placeholder="Ex: 1500" step="0.1" type="number"/>
+<span class="absolute right-unit-4 top-1/2 transform -translate-y-1/2 font-technical-data text-outline text-sm">m</span>
+</div>
+</div>
+</div>
+<!-- File Upload -->
+<div class="mt-unit-2">
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2">Plans Techniques (PDF, DWG, DXF)</label>
+<div class="border-2 border-dashed border-brand-border rounded-lg bg-surface-container p-unit-8 text-center hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-outline mb-unit-2 group-hover:text-brand-terracotta transition-colors">upload_file</span>
+<p class="font-body-md text-body-md text-brand-charcoal font-medium">Glissez-déposez vos fichiers ici</p>
+<p class="font-body-sm text-body-sm text-outline mt-unit-1">ou cliquez pour parcourir (Max 50MB)</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. IDENTIFICATION B2B -->
+<section class="bg-surface-container-lowest border border-brand-border rounded-lg shadow-sm p-unit-6 md:p-unit-8 flex flex-col gap-unit-6">
+<h2 class="font-headline-md text-headline-md text-brand-navy border-b border-brand-border pb-unit-4">Identification B2B</h2>
+<!-- Radio Selector -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-4 mb-unit-2">
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only custom-radio" name="client_type" type="radio" value="b2b"/>
+<div class="border border-brand-border rounded-lg p-unit-4 flex items-center gap-unit-3 hover:bg-surface-container transition-colors h-full">
+<div class="w-5 h-5 rounded-full border-2 border-outline radio-dot flex-shrink-0 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div>
+<p class="font-headline-sm font-semibold text-brand-charcoal">Compte Entreprise B2B</p>
+<p class="font-body-sm text-body-sm text-outline mt-1">Chantiers, Constructeurs, Revendeurs</p>
+</div>
+</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only custom-radio" name="client_type" type="radio" value="b2c"/>
+<div class="border border-brand-border rounded-lg p-unit-4 flex items-center gap-unit-3 hover:bg-surface-container transition-colors h-full opacity-60">
+<div class="w-5 h-5 rounded-full border-2 border-outline radio-dot flex-shrink-0 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div>
+<p class="font-headline-sm font-semibold text-brand-charcoal">Particulier B2C</p>
+<p class="font-body-sm text-body-sm text-outline mt-1">Projets résidentiels personnels</p>
+</div>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-6">
+<div class="md:col-span-2">
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="company-name">Nom de l'Entreprise <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-body-md text-body-md text-brand-charcoal form-input" id="company-name" name="company-name" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="niu">NIU (Numéro Identifiant Unique) <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-technical-data text-technical-data text-brand-charcoal form-input" id="niu" name="niu" placeholder="Obligatoire pour B2B" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="rccm">RCCM</label>
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-technical-data text-technical-data text-brand-charcoal form-input" id="rccm" name="rccm" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="contact-name">Personne de Contact <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-body-md text-body-md text-brand-charcoal form-input" id="contact-name" name="contact-name" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="email">Email Professionnel <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-brand-border rounded-DEFAULT px-unit-4 font-body-md text-body-md text-brand-charcoal form-input" id="email" name="email" type="email"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-body-sm text-body-sm text-brand-charcoal mb-unit-2" for="whatsapp">WhatsApp Business / Téléphone <span class="text-error">*</span></label>
+<div class="flex">
+<span class="inline-flex items-center px-unit-4 bg-surface-container border border-r-0 border-brand-border rounded-l-DEFAULT font-technical-data text-outline">+237</span>
+<input class="flex-1 h-12 bg-surface-container-lowest border border-brand-border rounded-r-DEFAULT px-unit-4 font-technical-data text-technical-data text-brand-charcoal form-input" id="whatsapp" name="whatsapp" type="tel"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. LOGISTIQUE & VALIDATION -->
+<section class="bg-surface-container-lowest border border-brand-border rounded-lg shadow-sm p-unit-6 md:p-unit-8 flex flex-col gap-unit-6">
+<h2 class="font-headline-md text-headline-md text-brand-navy border-b border-brand-border pb-unit-4">Logistique de Livraison</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-4">
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only custom-radio" name="logistics" type="radio" value="pickup"/>
+<div class="border border-brand-border rounded-lg p-unit-4 flex items-start gap-unit-3 hover:bg-surface-container transition-colors h-full">
+<div class="w-5 h-5 rounded-full border-2 border-outline radio-dot flex-shrink-0 mt-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div>
+<p class="font-headline-sm font-semibold text-brand-charcoal flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">factory</span>
+                                        Enlèvement Usine
+                                    </p>
+<p class="font-body-sm text-body-sm text-outline mt-1">Zone Industrielle Bekoko, Douala. Chargement par nos ponts roulants.</p>
+</div>
+</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only custom-radio" name="logistics" type="radio" value="delivery"/>
+<div class="border border-brand-border rounded-lg p-unit-4 flex items-start gap-unit-3 hover:bg-surface-container transition-colors h-full">
+<div class="w-5 h-5 rounded-full border-2 border-outline radio-dot flex-shrink-0 mt-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div>
+<p class="font-headline-sm font-semibold text-brand-charcoal flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+                                        Livraison sur Chantier
+                                    </p>
+<p class="font-body-sm text-body-sm text-outline mt-1">Soumis à cotation logistique supplémentaire selon la destination.</p>
+</div>
+</div>
+</label>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: STICKY RECAP -->
+<div class="lg:col-span-4 relative">
+<div class="sticky top-unit-8 bg-surface-container-lowest border border-brand-border rounded-lg shadow-sm flex flex-col">
+<div class="bg-brand-navy p-unit-6 rounded-t-lg">
+<h3 class="font-headline-md text-headline-md text-on-primary font-bold flex items-center gap-unit-2">
+<span class="material-symbols-outlined">receipt_long</span>
+                            RÉCAPITULATIF
+                        </h3>
+</div>
+<div class="p-unit-6 flex flex-col gap-unit-6">
+<!-- Dynamic Specs Area (Visual only for mockup) -->
+<div class="flex flex-col gap-unit-3">
+<div class="flex justify-between items-center border-b border-brand-border pb-unit-2">
+<span class="font-body-sm text-body-sm text-outline">Type de projet</span>
+<span class="font-body-sm text-body-sm text-brand-charcoal font-semibold text-right" id="summary-type">-</span>
+</div>
+<div class="flex justify-between items-center border-b border-brand-border pb-unit-2">
+<span class="font-body-sm text-body-sm text-outline">Épaisseur</span>
+<span class="font-technical-data text-technical-data text-brand-charcoal text-right" id="summary-thickness">- mm</span>
+</div>
+<div class="flex justify-between items-center border-b border-brand-border pb-unit-2">
+<span class="font-body-sm text-body-sm text-outline">Logistique</span>
+<span class="font-body-sm text-body-sm text-brand-charcoal font-semibold text-right">Usine (Bekoko)</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-unit-4 rounded border border-brand-border">
+<p class="font-body-sm text-body-sm text-brand-charcoal mb-2 font-medium">Documents joints :</p>
+<div class="flex items-center gap-2 text-outline font-body-sm">
+<span class="material-symbols-outlined text-lg">folder_off</span>
+<span>Aucun plan technique</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit-4 mt-unit-4">
+<button class="w-full h-12 bg-brand-terracotta text-on-primary font-label-caps text-label-caps rounded-DEFAULT hover:bg-secondary-container transition-colors flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-lg">send</span>
+                                VALIDER MA DEMANDE DE COTATION
+                            </button>
+<a class="w-full h-12 bg-surface-container-lowest border border-[#25D366] text-[#25D366] font-body-md text-body-md font-semibold rounded-DEFAULT hover:bg-[#25D366]/10 transition-colors flex items-center justify-center gap-2" href="#">
+<!-- using chat icon as proxy for whatsapp since vectors are banned -->
+<span class="material-symbols-outlined text-lg">chat</span>
+                                Assistance Directe WhatsApp
+                            </a>
+</div>
+<p class="font-body-sm text-xs text-outline text-center mt-2">
+                            Vos données sont protégées et utilisées uniquement dans le cadre de ce devis.
+                        </p>
+</div>
+</div>
+</div>
+</form>
+</main>
+<!-- 5. LEGAL FOOTER STRIP -->
+<div class="w-full bg-brand-navy py-unit-4 px-margin-mobile md:px-gutter mt-auto">
+<div class="max-w-container-max mx-auto flex items-center justify-center gap-unit-2 text-on-primary">
+<span class="material-symbols-outlined text-brand-terracotta">engineering</span>
+<p class="font-body-sm text-body-sm font-medium tracking-wide">
+                Étude technique gratuite sous 24h par notre Bureau d'Études Usine.
+            </p>
+</div>
+</div>
+<!-- Minimal JS for form sync interaction (Visual flair) -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectTypeSelect = document.getElementById('project-type');
+            const summaryType = document.getElementById('summary-type');
+            
+            projectTypeSelect.addEventListener('change', (e) => {
+                summaryType.textContent = e.target.options[e.target.selectedIndex].text;
+            });
+
+            const thicknessInput = document.getElementById('thickness');
+            const summaryThickness = document.getElementById('summary-thickness');
+            
+            thicknessInput.addEventListener('input', (e) => {
+                const val = e.target.value;
+                summaryThickness.textContent = val ? `${val} mm` : '- mm';
+            });
+        });
+    </script>
+</body></html>

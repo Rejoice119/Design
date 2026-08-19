@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TPM SA - Projets &amp; Réalisations BTP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#cabff7",
+                        "on-secondary-fixed-variant": "#862200",
+                        "secondary-fixed": "#ffdbd1",
+                        "surface-container-high": "#e2e7ff",
+                        "tertiary": "#000000",
+                        "secondary-container": "#fd6537",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-fixed": "#1d1441",
+                        "background": "#faf8ff",
+                        "inverse-surface": "#283044",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#191c1e",
+                        "surface-container-low": "#f2f3ff",
+                        "surface-container-highest": "#dae2fd",
+                        "on-primary-container": "#877db0",
+                        "outline-variant": "#c9c4cf",
+                        "surface-dim": "#d2d9f4",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e6deff",
+                        "inverse-on-surface": "#eef0ff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "primary-fixed-dim": "#cabff7",
+                        "primary-container": "#1d1441",
+                        "surface-variant": "#dae2fd",
+                        "on-background": "#131b2e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#5c1400",
+                        "on-primary-fixed-variant": "#49406f",
+                        "on-surface-variant": "#48454e",
+                        "surface": "#faf8ff",
+                        "surface-tint": "#615888",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#131b2e",
+                        "outline": "#79757f",
+                        "on-tertiary-container": "#818486",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "primary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#b02f00",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-secondary-fixed": "#3b0900",
+                        "brand-navy": "#1C1340",
+                        "brand-terracotta": "#D84B1F",
+                        "brand-bg": "#F8FAFC",
+                        "brand-surface": "#FFFFFF",
+                        "brand-border": "#E2E8F0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "unit-6": "1.5rem",
+                        "base": "4px",
+                        "unit-8": "2rem",
+                        "margin-mobile": "16px",
+                        "unit-4": "1rem",
+                        "unit-12": "3rem",
+                        "container-max": "1280px",
+                        "unit-2": "0.5rem",
+                        "unit-1": "0.25rem"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "technical-data": ["JetBrains Mono"],
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "technical-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .industrial-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(28, 19, 64, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(28, 19, 64, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-brand-terracotta selection:text-white">
+<!-- HERO BANNER -->
+<section class="relative w-full h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 w-full h-full">
+<div class="absolute inset-0 bg-brand-navy/85 z-10 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A wide panoramic, high-definition photograph of a massive industrial construction site in Cameroon during golden hour. Towering steel structures and heavy machinery stand against a bright sky. The lighting is dramatic and natural, casting sharp shadows that emphasize the scale and ruggedness of the B2B infrastructure project. The scene perfectly captures the industrial, modern corporate identity with deep navy shadows and warm terracotta sunlight accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9pDdAc9OL0AQep3W9F2gIR4WeOIs1PDQyQvrjfr2C5rlZEP_QV-kD0o2XpQT6Etx22UweFkx5eEnyQ4yO8mGM-toPz6XL31-fLHvwGxEHXenHQANPChE_uIR5fBgkjLeqKuaP4lNHOV7XjewXLscuwhTNDqfXK3oLaVmH6mG6eX5cUFSgUGrwTQiDTcs1gE3Z26QKi4F0rZTOvY43Hd4WwBQHuLZK5W8dezNMt870NSVhliPpYy5j')"></div>
+</div>
+<div class="relative z-20 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-white mb-unit-6 max-w-4xl">RÉALISATIONS &amp; CHANTIERS BTP AU CAMEROUN.</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-3xl mb-unit-12">Découvrez les projets industriels, portuaires et commerciaux alimentés par les usines de TPM SA (Douala PK12 / Bekoko). Étude de calpinage, tôles profilées sur-mesure et structures métalliques.</p>
+<div class="flex flex-col md:flex-row gap-unit-6 md:gap-gutter justify-center items-stretch w-full max-w-5xl">
+<div class="bg-white/10 backdrop-blur-sm border border-white/20 p-unit-6 rounded flex-1 flex flex-col items-center justify-center text-center hover:bg-white/15 transition-colors">
+<span class="font-headline-lg text-headline-lg text-brand-terracotta mb-unit-2 block">+ 500 000 m²</span>
+<span class="font-label-caps text-label-caps text-white">de Tôles BAC Profilées &amp; Livrées</span>
+</div>
+<div class="bg-white/10 backdrop-blur-sm border border-white/20 p-unit-6 rounded flex-1 flex flex-col items-center justify-center text-center hover:bg-white/15 transition-colors">
+<span class="font-headline-lg text-headline-lg text-brand-terracotta mb-unit-2 block">Plus de 1 000</span>
+<span class="font-label-caps text-label-caps text-white">Chantiers &amp; Hangars Industriels</span>
+</div>
+<div class="bg-white/10 backdrop-blur-sm border border-white/20 p-unit-6 rounded flex-1 flex flex-col items-center justify-center text-center hover:bg-white/15 transition-colors">
+<span class="font-headline-lg text-headline-lg text-brand-terracotta mb-unit-2 block">Partenaire Majeur</span>
+<span class="font-label-caps text-label-caps text-white">des Entreprises de BTP au Cameroun</span>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE GALLERY -->
+<section class="py-unit-12 md:py-24 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter industrial-grid">
+<div class="flex flex-col md:flex-row justify-between items-end mb-unit-12 gap-unit-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-brand-navy mb-unit-4">Galerie des Projets</h2>
+<div class="flex flex-wrap gap-unit-2">
+<button class="px-unit-4 py-unit-2 bg-brand-navy text-white rounded font-technical-data text-technical-data">Tous les Chantiers</button>
+<button class="px-unit-4 py-unit-2 bg-transparent border border-brand-border text-on-surface rounded font-technical-data text-technical-data hover:border-brand-navy transition-colors">Hangars &amp; Logistique</button>
+<button class="px-unit-4 py-unit-2 bg-transparent border border-brand-border text-on-surface rounded font-technical-data text-technical-data hover:border-brand-navy transition-colors">Infrastructures Publiques</button>
+<button class="px-unit-4 py-unit-2 bg-transparent border border-brand-border text-on-surface rounded font-technical-data text-technical-data hover:border-brand-navy transition-colors">Agro-Industrie</button>
+<button class="px-unit-4 py-unit-2 bg-transparent border border-brand-border text-on-surface rounded font-technical-data text-technical-data hover:border-brand-navy transition-colors">Projets Résidentiels</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-unit-6">
+<!-- Card 1 -->
+<article class="bg-brand-surface border border-brand-border rounded overflow-hidden group hover:border-brand-navy hover:shadow-sm transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-definition, unstyled raw photograph of a massive modern port warehouse in Douala, Cameroon. The structure features extensive bordeaux-colored industrial roofing (tôle BAC). The daytime lighting is harsh and bright, showcasing the massive scale of the logistics complex against an industrial port backdrop. The color palette emphasizes corporate navy structural beams and striking terracotta/bordeaux roof panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCUba_69tokAnVagBDV7b65YotVqqr8firn2j0-e0o46ujrvAuAW1jl3lvxhFbeLKKxMmDuOh6iMj0hd78FN5SOlwYb9XSAh4g1L_RXUgYx5ifFNaLCC-NDcsm-gWcaoOafuNsee-5kxBbiGaHTBFBL9fRcQKtyniRqVUlOy509EYNMWoFNg43xWUhhE31TfABjC8QZ2fbIpM-9eK0FJCR0F_0pu5ECDTYD6VR2vDMGALa-u7dhHNF"/>
+<div class="absolute top-unit-4 left-unit-4 bg-brand-navy text-white px-unit-2 py-unit-1 font-label-caps text-label-caps rounded">Logistique &amp; Port</div>
+</div>
+<div class="p-unit-6">
+<div class="flex justify-between items-start mb-unit-2">
+<h3 class="font-headline-md text-headline-md text-brand-navy">Complexe Logistique Portuaire (Douala)</h3>
+<span class="font-technical-data text-technical-data text-brand-terracotta">2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2">12 000 m² tôle BAC 0.50mm, fixations 6x80</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-brand-surface border border-brand-border rounded overflow-hidden group hover:border-brand-navy hover:shadow-sm transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A striking, high-definition photograph looking up at the complex steel roof structure of a large public stadium in Yaoundé, Cameroon. The image features bare Alu-Zinc roofing materials gleaming under clear daylight. The composition highlights the intricate geometry of the heavy-industry framework. The scene is bright and professional, adhering to a light-mode aesthetic with strong contrasts between the bright sky and dark structural elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzBN-KtqZNCGthbCZ26WU_xWfBW7YaEFjyKq8IbBLtqQqoJ37motMuBIaO3YMyZWLdOGZDhjuD7gDNobry9kCj8WBIWDwWSVEXJZDubm_Ri0F03ZAk3HWUGSkRAD_KBwpu5ZD9KUzEewVHMnlAhdZnEqpUtwYKPr0z3BrLv--wKWnG_3J75mOkrisRUxCBdLB3B5BRLHggTis49Yx8UFEP8WDdSy_WfBTgV-y5ILZBLtqTgYeGKJch"/>
+<div class="absolute top-unit-4 left-unit-4 bg-brand-navy text-white px-unit-2 py-unit-1 font-label-caps text-label-caps rounded">Infrastructure Publique</div>
+</div>
+<div class="p-unit-6">
+<div class="flex justify-between items-start mb-unit-2">
+<h3 class="font-headline-md text-headline-md text-brand-navy">Charpente &amp; Couverture du Stade (Yaoundé)</h3>
+<span class="font-technical-data text-technical-data text-brand-terracotta">2023</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2">BAC Alu-Zinc 0.60mm</p>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-brand-surface border border-brand-border rounded overflow-hidden group hover:border-brand-navy hover:shadow-sm transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed, raw photograph of a newly constructed agro-industrial processing plant in Bafoussam, Cameroon. The facility features expansive metal roofing interspersed with translucent panels allowing bright sunlight to flood the interior. The external view shows a pristine, modern industrial site surrounded by a utilitarian landscape. The image uses high-key, natural lighting, emphasizing a clean, robust corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEsOeCLJoP2ZQm9dZLerJjRthKni820l2QJ2n6GRuL1rHctdfukSSoX3SKxmMd-aU8-kQ53os2Mv41PN61plhDgKvtTbCCr6Y-ISZlcn7OjsqY3t5mGgBAwiHRxUd30iK1EVwQfCODmwx0D07k-hOebCe7_9oE22KJBGTusGYrvj3BvzfiIn65Rs-NQsEC7q_f9iCesqn1_o8K3nOpaTK0SBPjGXHr8A6hphhehQPqycqBHZyFklXQ"/>
+<div class="absolute top-unit-4 left-unit-4 bg-brand-navy text-white px-unit-2 py-unit-1 font-label-caps text-label-caps rounded">Agro-Industrie</div>
+</div>
+<div class="p-unit-6">
+<div class="flex justify-between items-start mb-unit-2">
+<h3 class="font-headline-md text-headline-md text-brand-navy">Usine Agro-Industrielle (Bafoussam)</h3>
+<span class="font-technical-data text-technical-data text-brand-terracotta">2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2">8 500 m² tôles BAC, translucides</p>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-brand-surface border border-brand-border rounded overflow-hidden group hover:border-brand-navy hover:shadow-sm transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A crisp, high-definition photograph of a heavy-duty industrial seaside hangar for cement storage in Kribi. The massive metal structure is made of electro-galvanized aluminum reflecting the harsh coastal sun. The architectural lines are rigid and authoritative. The atmosphere is purely functional and industrial, captured in bright, light-mode suitable lighting with stark contrasts between the gleaming metal and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe5oANlE3h0wgL4qrxQxYE9bJ16pyP0MWg67zsWE1bF9EiHrzsfZ8N4m6YUqkHfzL3mP1c1nrkXkS4-3phe57-HAq8lXyxxlGTnd00juUthH4aG_5BA9adh0ZFuFBlnohq5Ck460kg81iDQobBXAjKBPVBvJE4IEl-qJ73ZwjQssm7BvbOU4-3FZxAP49atzRIWYym7pUovV5XcLomgrVc-yb-jfVwkR7S72mi5PTejMjMHu5lmORE"/>
+<div class="absolute top-unit-4 left-unit-4 bg-brand-navy text-white px-unit-2 py-unit-1 font-label-caps text-label-caps rounded">Industrie &amp; Marine</div>
+</div>
+<div class="p-unit-6">
+<div class="flex justify-between items-start mb-unit-2">
+<h3 class="font-headline-md text-headline-md text-brand-navy">Hangar Stockage Cimenterie (Kribi)</h3>
+<span class="font-technical-data text-technical-data text-brand-terracotta">2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2">Electro-zingage 800 VA, alu 0.50mm</p>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-brand-surface border border-brand-border rounded overflow-hidden group hover:border-brand-navy hover:shadow-sm transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautiful, unstyled high-definition photograph of an upscale residential complex under construction in Douala Bonapriso. The focus is on the large, newly installed terracotta/bordeaux colored tile-patterned metal roofing sheets. The lighting is soft yet bright, highlighting the premium quality of the materials against a clear sky. The aesthetic is modern, robust, and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh4onxFTqMtgBizrN1ZSw2K4fDC9mgnS1Zv1A447bDcxi7rw1e4Vy_TB1hTDA65q4dhYlvyBma8ojE7j7qdcznDxNb5Zq8Ogft-o2rzTdd6zAqXDmUD6J8dBwYITDHNuoW2-3ZAiHtBufn9NieCwXUJsg0Q5_67B3zgwpEpNeK-uhdAKCrNpYMQ3-d_yzLv9dtR0fSklcZS9VtVIBMCOqqSGDYjUl4ayTLv1qRaCRCV40Gie44hYfL"/>
+<div class="absolute top-unit-4 left-unit-4 bg-brand-navy text-white px-unit-2 py-unit-1 font-label-caps text-label-caps rounded">Résidential</div>
+</div>
+<div class="p-unit-6">
+<div class="flex justify-between items-start mb-unit-2">
+<h3 class="font-headline-md text-headline-md text-brand-navy">Complexe Résidentiel (Douala Bonapriso)</h3>
+<span class="font-technical-data text-technical-data text-brand-terracotta">2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2">Tôles Tuiles Rouge Bordeau</p>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-brand-surface border border-brand-border rounded overflow-hidden group hover:border-brand-navy hover:shadow-sm transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide, high-resolution photograph of a sprawling commercial distribution center warehouse in Garoua. The massive structure features distinct orange metal roofing panels (tôle BAC). The environment is arid and brightly lit by intense sunlight, casting strong, defined shadows along the building's ribbed surface. The visual tone is highly corporate, structural, and strictly industrial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrahTasm_nx_IHqbUa70yyfQZp0jQeQC5dLb9aUIg4ZSrFg-5M8NvjIeiG69M4CwvZ_3hPK8jVnBLVzSQaky9USV4Yg1uBEl_OFW0ecWx0qeSZgtoJy8gcJdAFSDcHPi02MSMrH6s2GNwyFEGFuNR0WNK5rfLnx4XwkLhcFHj8TgPwhdC0oMXdgBvWC5Ba96aVl0KwNcOIF58r2IabPX9kbz2hfK1IdcuQyoPdSeIdEFOk-BD-tiFb"/>
+<div class="absolute top-unit-4 left-unit-4 bg-brand-navy text-white px-unit-2 py-unit-1 font-label-caps text-label-caps rounded">Commercial &amp; Logistique</div>
+</div>
+<div class="p-unit-6">
+<div class="flex justify-between items-start mb-unit-2">
+<h3 class="font-headline-md text-headline-md text-brand-navy">Centre de Distribution (Garoua)</h3>
+<span class="font-technical-data text-technical-data text-brand-terracotta">2023</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2">BAC 0.45mm Orange, joints 1976</p>
+</div>
+</article>
+</div>
+</section>
+<!-- TECHNICAL CASE STUDY -->
+<section class="py-unit-12 md:py-24 bg-brand-bg w-full">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="bg-brand-surface border border-brand-navy rounded overflow-hidden shadow-sm flex flex-col md:flex-row items-stretch">
+<div class="w-full md:w-1/2 relative min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A professional, high-definition photograph of two site engineers in high-visibility vests and hard hats actively inspecting a massive steel roof structure on an industrial construction site. They are holding blueprints and pointing at the metal framework. The lighting is natural and bright, conveying a sense of precision, expertise, and heavy-industry scale. The image palette is cool with stark metallic elements and vivid safety gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbL7yWXGx5vmhTQvwFxQNZJID0jf2suuYRUof1VF29o-6B5rB5kkmAx1GCr-3W8r4agRrdAbQjSrh7Gq9peJ4znNK16FabwgUisX2dYkatjfNFOqdIXPO145voLcyiUr5PyctCI1LxFfPnjZOqPnmBGhaXwHDWZgHj9gD_1kgRnzXSOfVh2EISKDqNhBBWbwed_qQmn3Uvdyo0Tfw-qe5IgNj5rG0Oo9sRaMaNrS-4RX8ykDO8LBUH"/>
+</div>
+<div class="w-full md:w-1/2 p-unit-8 md:p-12 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-brand-navy mb-unit-8">Étude de Case : Hangar Logistique Portuaire de Douala</h2>
+<div class="space-y-unit-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-brand-terracotta mb-1">Défi</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">12 000 m² en &lt; 15 jours</span>
+</div>
+<div class="h-px w-full bg-brand-border"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-brand-terracotta mb-1">Solution</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Calpinage précis, profilage sur-mesure 12.50m</span>
+</div>
+<div class="h-px w-full bg-brand-border"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-brand-terracotta mb-1">Produits</span>
+<span class="font-technical-data text-technical-data text-brand-navy">Tôle BAC 0.50mm Bordeau (TBP_BOR_B30_4N), Fixations 6x80, Joints 1976</span>
+</div>
+<div class="h-px w-full bg-brand-border"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-brand-terracotta mb-1">Résultat</span>
+<span class="font-body-lg text-body-lg text-brand-navy font-bold">-12% budget, 800 m²/jour</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA BANNER -->
+<section class="bg-brand-navy py-16 md:py-24 border-t-4 border-brand-terracotta">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-gutter text-center flex flex-col items-center">
+<h2 class="font-display-lg text-display-lg text-white mb-unit-4">Vous avez un chantier BTP ou un hangar à couvrir au Cameroun?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-unit-12">Confiez l'étude de calpinage et le chiffrage au bureau d'études usine.</p>
+<div class="flex flex-col sm:flex-row gap-unit-4 w-full sm:w-auto">
+<button class="bg-brand-terracotta text-white font-body-md text-body-md font-bold py-4 px-8 rounded hover:bg-brand-terracotta/90 transition-colors w-full sm:w-auto whitespace-nowrap">Demander une Étude &amp; Cotation Sur-Mesure</button>
+<button class="bg-[#15803d] text-white font-body-md text-body-md font-bold py-4 px-8 rounded hover:bg-[#15803d]/90 transition-colors w-full sm:w-auto whitespace-nowrap">Échanger avec un Ingénieur Commercial Chantier</button>
+</div>
+</div>
+</section>
+</body></html>

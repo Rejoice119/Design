@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TPM SA - Institutionnel et Histoire</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tpm: {
+              navy: '#1C1340',
+              terracotta: '#D84B1F',
+              slate: '#0F172A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    /* Custom styles if necessary, but Tailwind covers most */
+    .timeline-node::after {
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      bottom: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      background-color: #cbd5e1;
+      z-index: 0;
+    }
+    @media (max-width: 768px) {
+      .timeline-node::after {
+        left: 2rem;
+        transform: none;
+      }
+    }
+    .timeline-node:last-child::after {
+      display: none;
+    }
+    .timeline-circle {
+      position: absolute;
+      left: 50%;
+      top: 1.5rem;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    @media (max-width: 768px) {
+      .timeline-circle {
+        left: 2rem;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-slate-50">
+<!-- BEGIN: Institutional Hero Section -->
+<section class="relative bg-slate-900 py-24 lg:py-32" data-purpose="institutional-hero">
+<div class="container mx-auto px-4 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Left Column: Content -->
+<div class="text-white">
+<span class="inline-block bg-tpm-terracotta text-white text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wide uppercase">
+            Filiale du Groupe CAC — Fondé en 1976
+          </span>
+<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+            50 ANS D'INNOVATION INDUSTRIELLE ET DE TRANSFORMATION MÉTALLIQUE.
+          </h1>
+<p class="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
+            De l'invention des premiers joints bitumés en 1976 à l'unique usine d'électro-zingage de 800 VA au Cameroun.
+          </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-tpm-terracotta hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded text-center transition duration-300" href="#">
+              TÉLÉCHARGER LA PLAQUETTE
+            </a>
+<a class="border-2 border-white hover:bg-white hover:text-tpm-navy text-white font-semibold py-4 px-8 rounded text-center transition duration-300" href="#">
+              VISITER L'USINE
+            </a>
+</div>
+</div>
+<!-- Right Column: Image -->
+<div class="relative h-full w-full min-h-[400px]">
+<div class="absolute inset-0 bg-tpm-navy opacity-20 z-10 mix-blend-multiply rounded-lg"></div>
+<img alt="Bekoko factory floor" class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-2xl ring-1 ring-white/20" src="https://lh3.googleusercontent.com/aida/AP1WRLvcuEO2CrIdsmtypBV7F5nJhbQD3LsGEMH1vhQtG0kWcdEBbmtLm_uyvnI19d0-DUFlKwAn_K5ZDI0kIYxgrH7hYz5zfTzCBnRM_0amvqYlBOFk_PCHdilq7ebjragY0R-MHAE4IgZbnyX5B5PPcyblPTyRs4dEAp_sR9LRyrdVTahjLxFffa52nXHnB1bXnxgY62FWJbLLXAMx6EWAxB5dvkYdIiQlEYcoF9nb13nOWQUNyEmiJ7h-Ug"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Institutional Hero Section -->
+<!-- BEGIN: Historic Timeline -->
+<section class="py-24 bg-slate-50" data-purpose="historic-timeline">
+<div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-bold text-tpm-navy mb-6 tracking-tight">Archives Historiques</h2>
+<div class="h-1 w-32 bg-tpm-terracotta mx-auto"></div>
+</div>
+<div class="relative">
+<!-- Node 1976 -->
+<div class="timeline-node relative mb-24 md:mb-32">
+<div class="timeline-circle w-6 h-6 bg-tpm-terracotta rounded-full border-4 border-slate-50 shadow-md"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+<div class="md:text-right md:pr-12 pl-16 md:pl-0">
+<span class="text-3xl font-bold text-tpm-terracotta block mb-3">1976</span>
+<h3 class="text-2xl font-bold text-tpm-navy mb-4">Invention des Joints Bitumés</h3>
+<p class="text-gray-600 leading-relaxed text-lg">Lancement de la production des premiers joints bitumés, marquant le début de notre aventure industrielle au Cameroun. Une innovation pionnière qui a défini nos standards de qualité.</p>
+</div>
+<div class="pl-16 md:pl-12">
+<img alt="1976 Production" class="w-full rounded-lg shadow-xl object-cover aspect-video ring-1 ring-black/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdb6rm0W27fIeZvqm2N5mQEtag07xS39y41YArjnb4--2RptAi0vS66XEAjSpW8IFfZ7F1a5HPfsAT4UtlX2puYx-3G249QUK5Seugl1gvuw8cQq2ms99HF9AT-s1O1PQUbmHOSZQ38cH4i4PaSc-1b-Kzf8Irc8yEUjSbNwCO4X6ux7LVOJ2O98gRU7cK9EBTCL0YY-FkTnKVVvj7QFdtf9IAmWfhJzaHWxp0aqOt7IaVpnn9nGxI"/>
+</div>
+</div>
+</div>
+<!-- Node 1978 -->
+<div class="timeline-node relative mb-24 md:mb-32">
+<div class="timeline-circle w-6 h-6 bg-tpm-terracotta rounded-full border-4 border-slate-50 shadow-md"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+<div class="md:order-2 md:pl-12 pl-16 md:pl-0">
+<span class="text-3xl font-bold text-tpm-terracotta block mb-3">1978</span>
+<h3 class="text-2xl font-bold text-tpm-navy mb-4">Décret Officiel</h3>
+<p class="text-gray-600 leading-relaxed text-lg">Reconnaissance gouvernementale par décret officiel, validant notre impact sur le secteur industriel local et cimentant notre position en tant qu'acteur économique clé.</p>
+</div>
+<div class="md:order-1 md:text-right pl-16 md:pl-0 md:pr-12">
+<img alt="1978 Decree" class="w-full rounded-lg shadow-xl object-cover aspect-video ring-1 ring-black/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm3z0okOlkOw8XcprtYJ905aCZ6cq10AFa9wacNTQl-QSNG1y9R0s4Xn69cYsQ_6bqFveTcFW9AnCyK_T9hzUlhEMrR9cPACrth8Q6tlSyTGmdszo7oTEi1uBULa-I6PYgaT3xBjy7Sfwg1og9lYlOeenyfEYiJu7Bk0adJEzBIRvJiW0pI2edv8kK6HxkxVYN_thwxHHu11vglNTEZ9izI50zclSvD-LttWXC8Ru7tjzGeDtPtI6V"/>
+</div>
+</div>
+</div>
+<!-- Node 1990 -->
+<div class="timeline-node relative mb-24 md:mb-32">
+<div class="timeline-circle w-6 h-6 bg-tpm-terracotta rounded-full border-4 border-slate-50 shadow-md"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+<div class="md:text-right md:pr-12 pl-16 md:pl-0">
+<span class="text-3xl font-bold text-tpm-terracotta block mb-3">1990</span>
+<h3 class="text-2xl font-bold text-tpm-navy mb-4">Usine de Zingage 800 VA</h3>
+<p class="text-gray-600 leading-relaxed text-lg">Mise en service de notre usine de zingage électrolytique unique, augmentant considérablement nos capacités de production avec un équipement de pointe d'une puissance de 800 VA.</p>
+</div>
+<div class="pl-16 md:pl-12">
+<img alt="1990 800 VA Zingage" class="w-full rounded-lg shadow-xl object-cover aspect-video ring-1 ring-black/5" src="https://lh3.googleusercontent.com/aida/AP1WRLv23xRMFoeK6w9cR0acJA-LhO96FW_kBOEnmsSoKSOsDd5Ougdm8VDotR4WKHJJkfeVAWxqtJDqtuyH3BWrKdhbBqSo0ReEMfFzC2UI5TOLNH3XeJB2Oxl_X4UYH4Pe0RkdQMIG_XPzlnOWlUUKnsr2p_kfbdmnNkF7FJABxM3Pg_CH3f9-JwQNSD1ONlVQuk3swDqzWvlgUtdPzVz0Ft2vseBmBmbGPnBafn6hsWKoymNACToab-sOpDM"/>
+</div>
+</div>
+</div>
+<!-- Node 2000+ -->
+<div class="timeline-node relative">
+<div class="timeline-circle w-6 h-6 bg-tpm-terracotta rounded-full border-4 border-slate-50 shadow-md"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+<div class="md:order-2 md:pl-12 pl-16 md:pl-0">
+<span class="text-3xl font-bold text-tpm-terracotta block mb-3">2000+</span>
+<h3 class="text-2xl font-bold text-tpm-navy mb-4">Expansion Usine de Bekoko</h3>
+<p class="text-gray-600 leading-relaxed text-lg">Développement massif du site de Bekoko (1,500 m²) intégrant les dernières technologies de profilage et plasturgie pour répondre aux exigences modernes du BTP.</p>
+</div>
+<div class="md:order-1 md:text-right pl-16 md:pl-0 md:pr-12">
+<img alt="Bekoko Plant" class="w-full rounded-lg shadow-xl object-cover aspect-video ring-1 ring-black/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMdGdOiw50ba5AeBwww5d9qO9q7yum9A-bbQbg_5SOMVQoHpT5LPOMCcPklei_riKADGr1DXf8_-jH8mkD0VOZI1SPHv6Z5WS8aGOzm-I5CqC9QUUKGwwp_3lT-2Aaf3BOKEFazbp0FzRdVis-C7mCRJoS8qZZCovTVVIpLH8TxRkH91wEuHraCj-nQ6MuxsbE4AFstOdPM1LEtULIEgfuc7745r7Fdb2jFG6tRvsFCMMYut3ZGDc6"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Historic Timeline -->
+<!-- BEGIN: Technical Grid -->
+<section class="py-24 bg-white" data-purpose="technical-grid">
+<div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold text-tpm-navy mb-6 tracking-tight">Savoir-Faire Industriel</h2>
+<div class="h-1 w-32 bg-tpm-terracotta mx-auto mb-8"></div>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Des équipements de pointe pour répondre aux exigences les plus élevées de la transformation métallique et de la plasturgie industrielle.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<!-- Machine 1 -->
+<div class="bg-slate-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img alt="Machine de Profilage" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLslFygwQVdimEk0fOzO-aNC2j37msctJK1Y6TU2zCyu6W8p63CBmoMTC3fjV_ullE93bhYibg2Oy0fGSdfo8mHnWNjJGGayqwRoKZY408txQ_Pu1UP1teQXmyUeM4ksmlI1tYSTwN8pQOsmrgZf4hYlktbwK2izDq49RU7_o9I5pPygJvVueM2x1aTzqZSH2rHVxVA92d7udSWgIaJ0_amv__p6mr8SmYm0W3n_jWVowyxFa1H6JqYIOwM"/>
+</div>
+<div class="p-8 flex-grow">
+<h3 class="text-2xl font-bold text-tpm-navy mb-3">Lignes de Profilage</h3>
+<p class="text-gray-600 mb-4">Systèmes haute précision pour toitures et structures complexes.</p>
+<ul class="text-sm text-gray-500 space-y-2 font-mono">
+<li>Épaisseur max: 3.0mm</li>
+<li>Vitesse prod: 25m/min</li>
+</ul>
+</div>
+</div>
+<!-- Machine 2 -->
+<div class="bg-slate-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img alt="Machine Stamping/Pliage" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiuZMuYj4SMRXKpGL8u8mOWK_LVDUJVJ6yY1UA1mb-YBdhlQ8beacldu6umCbllF7OCByix31Ryi8vhM7V8V1ds31HcmAfq8ta5CXjGp07tS0b8YAC8NapDLemmbugjZyFiSuFlolE-sjo2EQvmI-1kwa__Y5_XyiyeytImWc25qO2P00I1OZKRAMwX5wqVVi2oD0D0GN_AY0qTL6fw5SWpV6-49UPsDCV8F-dd1uHDlmPW8nvoh8s"/>
+</div>
+<div class="p-8 flex-grow">
+<h3 class="text-2xl font-bold text-tpm-navy mb-3">Stamping &amp; Pliage</h3>
+<p class="text-gray-600 mb-4">Équipements lourds pour l'emboutissage et le pliage sur mesure.</p>
+<ul class="text-sm text-gray-500 space-y-2 font-mono">
+<li>Presse hydrau: 500 tonnes</li>
+<li>Précision: ±0.1mm</li>
+</ul>
+</div>
+</div>
+<!-- Machine 3 -->
+<div class="bg-slate-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img alt="Installation Zingage 800 VA" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLv23xRMFoeK6w9cR0acJA-LhO96FW_kBOEnmsSoKSOsDd5Ougdm8VDotR4WKHJJkfeVAWxqtJDqtuyH3BWrKdhbBqSo0ReEMfFzC2UI5TOLNH3XeJB2Oxl_X4UYH4Pe0RkdQMIG_XPzlnOWlUUKnsr2p_kfbdmnNkF7FJABxM3Pg_CH3f9-JwQNSD1ONlVQuk3swDqzWvlgUtdPzVz0Ft2vseBmBmbGPnBafn6hsWKoymNACToab-sOpDM"/>
+</div>
+<div class="p-8 flex-grow">
+<h3 class="text-2xl font-bold text-tpm-navy mb-3">Zingage Électrolytique</h3>
+<p class="text-gray-600 mb-4">Bain d'électro-zingage unique assurant une protection anti-corrosion optimale.</p>
+<ul class="text-sm text-gray-500 space-y-2 font-mono">
+<li>Puissance: 800 VA</li>
+<li>Capacité bain: 12,000L</li>
+</ul>
+</div>
+</div>
+<!-- Machine 4 -->
+<div class="bg-slate-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img alt="Unité de Plasturgie" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsCzsghKOJLGW-wbOZJXQnnTjaE968pC6_BzEh1JjF6kXLe5rDBWy2Z5g9RyH2udHTM2YoCm1zi8wy3_ujgqkAf3RHDcAiO9VEDLlk4AGK7tW8Jq7TAeemA3pymz8SuhPEWY6qAheE-9vcdVog7LGg0Uia6fE54GXvHl4j8vyPBlRVot1BcvOAdd2dPmfnhsbMASA8E0_qni1VHowfZBvDLhyPPfgQC31f1J_UUvuml8ICmlORLpyy1ZdM"/>
+</div>
+<div class="p-8 flex-grow">
+<h3 class="text-2xl font-bold text-tpm-navy mb-3">Unité Plasturgie</h3>
+<p class="text-gray-600 mb-4">Injection et extrusion plastique complétant notre offre métallique.</p>
+<ul class="text-sm text-gray-500 space-y-2 font-mono">
+<li>Force de fermeture: 300T</li>
+<li>Matériaux: PVC, PEHD, PP</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Technical Grid -->
+<!-- BEGIN: Partners & Agreements -->
+<section class="py-20 bg-slate-900 border-t-4 border-tpm-terracotta" data-purpose="partners-section">
+<div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Réseau de Confiance International</h2>
+<div class="h-1 w-24 bg-tpm-terracotta mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Real photos representing partners/agreements as requested -->
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg border border-slate-700 group h-32 relative">
+<img alt="Agrément 1978" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqKNl9Wp8FDD3XprgIOIxmijWwqwUpXOi__C06D7LHO7l0Ul2QIlVUyVe1oHD2rZ2w3XUBqgDVpnvDXjGP67BNzwn5PdQ-GjHLMFHKkXWasJxxhxnRbtlzmrKVbiCJ9AbU7_orNcK5jtkw8XEb_YvvOe6qBu2gNCOOSzxnuLbB9M7Jbdw0g1zbfQLMrhAS28B5jjRADl8HuHEIZz7yJB3xaQZYCeh_vY1CChZ82KsorLKQewtM8DGq"/>
+</div>
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg border border-slate-700 group h-32 relative">
+<img alt="Agrément Fiscal 1980" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPDkZW_Hd_Cldpd110k0jzKInZyCLdxBOG_Xb6RwPNJMQsR7Pr44VsJHKPcbTQVvh20wEiR37DfZWNTkwWvq_y08bv_nMXru6WESUuoSohY7ZNpFTLPQQeZK9jedKiert1pBR0jzxRl29sCoRZXDVjuBJZ8T-1d6a3SVFraTEpeb9CF2t5JWQeH59iiFnI3uraAW9FG8qDg-o23iLWxjJj29QAmcaIrybm7G9Ric6L4LVt1VHyzDSi"/>
+</div>
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg border border-slate-700 group h-32 relative">
+<img alt="ETANCO France Partner Plant" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb8-zeAyOy6GIH9PDAXCYK8iNdoyU7i_gTvbHgnwjPD71qGmKQCzmN-_XoARNR36SQ1ewk1Vucu57KGYNZ-STGUnGUtx7KthiLbDL_iMT5W562OM1RkVS2NnFuYXNVmrm8rHZhxSJcM3HltsUUJz6oZkSMj01S9phjO8Ov9iQpf9BKSQ2Al7Noks-Ha81Tpjt05FkD02umYRrotj9TtGFDBOrjYK3L5NyRXJBeLR-Bire5_26ak8bR"/>
+</div>
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg border border-slate-700 group h-32 relative">
+<img alt="FRIULSIDER Italy Partner Plant" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqV3uyRD61bRQZhrm5vhywV_7c1sTQ0QqINstAoLPMSTQYkJAFH1HFgVh6zgHrXYs2T4T7LnH7WE7M2IzzbbqJHL5q5JLWERcNds6mX72dxrMDPxPLPlaSazZKGZ5Ev_JtDIX7FA3gUL6PAB6KLRC4b1fMxIt-lml6PWHvqwVkw080M4BP8RsBmtZdP8tZf0TnSsR3cBjOXcC6CBZFKelTIV_-TOqwjEb7P4_w1y-KzNWiwQZghRsD"/>
+</div>
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg border border-slate-700 group h-32 relative">
+<img alt="HEMATRADE Germany Partner Plant" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdFzJffNok9GWkgWbcDYp_u0PKLgZk3gzdRuXD80yEkzLOGRsjcxbhkIh1Lf5xuqEAFJD-DLkIvfqMl0cNBSskl_ceIxgJybILmQJ8mHfGZHwB13RiTlL5OnzHLt00USZ5jyYWQVzm_8tVljrDWiDhz_VDnNF2rivZlCEFlmH2GELOmUH001IWpzvv_9sqfmKXWd_SGKxcLe-BB9oiuX5f4ntSNmBnYngfIYmSgLong07wGiOzEv0A"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Partners & Agreements -->
+<!-- BEGIN: Engagements Banner -->
+<section class="bg-tpm-navy py-20" data-purpose="engagements-cta">
+<div class="container mx-auto px-4 lg:px-8 text-center max-w-5xl">
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 leading-tight">
+        L'excellence industrielle au service du développement BTP de la sous-région.
+      </h2>
+<a class="inline-block bg-tpm-terracotta hover:bg-orange-700 text-white font-bold py-5 px-12 rounded-sm text-lg transition-colors duration-300 tracking-wide uppercase" href="#">
+        Contacter le Bureau d'Études Usine
+      </a>
+</div>
+</section>
+<!-- END: Engagements Banner -->
+</body></html>
